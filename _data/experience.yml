@@ -31,3 +31,18 @@
   #   - Implemented and visualized Engineering reliability metrics for monthly investor reports
   #   - Migrated local Engineering reliability data pipelines to cloud-based solution using Databricks
   #   - Designed and implemented postmortem automation system for incident tracking
+
+- company: Eduka Systems
+  position: Backend Engineer (Part-time)
+  duration: Feb 2020 — March 2020
+  summary: Developed backend services for an e-learning platform.
+
+- company: Institut Teknologi Bandung
+  position: Teaching Assistant
+  duration: Jan 2020 — Dec 2020
+  summary: Teaching assistant for fundamental programming and data structure & algorithm courses.
+
+- company: Private Olympiad Education Center
+  position: Computer Olympiad Instructor
+  duration: Aug 2017 - May 2020
+  summary: Taught middle and high school students about competitive programming and computer olympiad in several institutions such as ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, and the OSN Training Center. Successfully helped the students to get medals in National level from Bronze until Gold medal.
