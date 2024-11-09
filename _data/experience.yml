@@ -2,12 +2,12 @@
 - company: Superbank Indonesia
   position: Software Engineer (Developer Experience)
   duration: June 2024 — Present
-  summary: Helping developers to be come more productive and happier by improving the developer experience.
+  summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank. Helping engineers to be come more productive and happier by improving the developer experience.
 
 - company: Xendit
   position: Senior Software Engineer (L5 Software Engineer)
   duration: May 2023 — Present
-  summary: Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development. Projects included like API Gateway & Authentication Platform for Open Banking Products, Consumer Open Banking service, eKYC, and more.
+  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development. Projects included like API Gateway & Authentication Platform for Open Banking Products, Consumer Open Banking service, eKYC, and more.
   # items:
   #   - Designed and developed API Gateway & Authentication Platform for Open Banking Products from scratch
   #   - Built in-house Consumer Open Banking service with direct connection to Bank Partner's Core Banking
@@ -16,7 +16,7 @@
 - company: Xendit
   position: Software Engineer (L3 & L4 Software Engineer)
   duration: July 2021 — May 2023
-  summary: Worked on Xendit's SNAP merchant-facing API (Payment money-IN API like QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
+  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked on Xendit's SNAP merchant-facing API (Payment money-IN API like QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
   # items:
   #   - Spearheaded design and development of Xendit's SNAP Payments API
   #   - Led team of contractor engineers for HR automation solutions
@@ -26,16 +26,16 @@
 - company: Xendit
   position: Software Engineer (Intern – Part-time)
   duration: June 2020 — June 2021
-  summary: Worked directly with CTO on Engineering reliability metrics and reporting.
+  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked directly with CTO on Engineering reliability metrics and reporting.
   # items:
   #   - Implemented and visualized Engineering reliability metrics for monthly investor reports
   #   - Migrated local Engineering reliability data pipelines to cloud-based solution using Databricks
   #   - Designed and implemented postmortem automation system for incident tracking
 
-- company: Eduka Systems
+- company: Eduka System
   position: Backend Engineer (Part-time)
   duration: Feb 2020 — March 2020
-  summary: Developed backend services for an e-learning platform.
+  summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia. Developed backend services for an e-learning platform.
 
 - company: Institut Teknologi Bandung
   position: Teaching Assistant
