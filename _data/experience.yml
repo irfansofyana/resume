@@ -7,7 +7,7 @@
 - company: Xendit
   position: Senior Software Engineer (L5 Software Engineer)
   duration: May 2023 — Present
-  summary: Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development.
+  summary: Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development. Projects included like API Gateway & Authentication Platform for Open Banking Products, Consumer Open Banking service, eKYC, and more.
   # items:
   #   - Designed and developed API Gateway & Authentication Platform for Open Banking Products from scratch
   #   - Built in-house Consumer Open Banking service with direct connection to Bank Partner's Core Banking
@@ -16,7 +16,7 @@
 - company: Xendit
   position: Software Engineer (L3 & L4 Software Engineer)
   duration: July 2021 — May 2023
-  summary: Worked on BI SNAP merchant-facing projects and led various development initiatives while contributing to internal open-source software.
+  summary: Worked on Xendit's SNAP merchant-facing API (Payment money-IN API like QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
   # items:
   #   - Spearheaded design and development of Xendit's SNAP Payments API
   #   - Led team of contractor engineers for HR automation solutions
@@ -26,7 +26,7 @@
 - company: Xendit
   position: Software Engineer (Intern – Part-time)
   duration: June 2020 — June 2021
-  summary: Collaborated with CTO on Engineering reliability metrics and data pipeline improvements.
+  summary: Worked directly with CTO on Engineering reliability metrics and reporting.
   # items:
   #   - Implemented and visualized Engineering reliability metrics for monthly investor reports
   #   - Migrated local Engineering reliability data pipelines to cloud-based solution using Databricks
