@@ -1,19 +1,33 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+- company: Superbank Indonesia
+  position: Software Engineer (Developer Experience)
+  duration: June 2024 — Present
+  summary: Helping developers to be come more productive and happier by improving the developer experience.
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+- company: Xendit
+  position: Senior Software Engineer (L5 Software Engineer)
+  duration: May 2023 — Present
+  summary: Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development.
+  # items:
+  #   - Designed and developed API Gateway & Authentication Platform for Open Banking Products from scratch
+  #   - Built in-house Consumer Open Banking service with direct connection to Bank Partner's Core Banking
+  #   - Worked with technologies including Go, Typescript, Docker, Kubernetes, AWS, and more
 
+- company: Xendit
+  position: Software Engineer (L3 & L4 Software Engineer)
+  duration: July 2021 — May 2023
+  summary: Worked on BI SNAP merchant-facing projects and led various development initiatives while contributing to internal open-source software.
+  # items:
+  #   - Spearheaded design and development of Xendit's SNAP Payments API
+  #   - Led team of contractor engineers for HR automation solutions
+  #   - Achieved top 3 rankings on internal OSS leaderboard for 2022
+  #   - Designed and implemented Engineering Scorecard reports automation system
 
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+- company: Xendit
+  position: Software Engineer (Intern – Part-time)
+  duration: June 2020 — June 2021
+  summary: Collaborated with CTO on Engineering reliability metrics and data pipeline improvements.
+  # items:
+  #   - Implemented and visualized Engineering reliability metrics for monthly investor reports
+  #   - Migrated local Engineering reliability data pipelines to cloud-based solution using Databricks
+  #   - Designed and implemented postmortem automation system for incident tracking

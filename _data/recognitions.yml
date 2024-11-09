@@ -1,10 +1,31 @@
 # Recognitions
-- award: Outstanding Achievement
-  organization: Springfield Young Professionals
-  year: 2010, 2014
-  summary: Awarded the Outstanding Achievement award for contributions made to the community and professional accomplishments.
 
-- award: Most Likely To Succeed
-  organization: Springfield High School
-  year: 2004
-  summary: Voted Most Likely To Succeed by a panel of my high school peers.
+- award: 7th rank IEEExtreme Programming Competition 13.0
+  organization: IEEE
+  year: 2019
+  summary: Ranked 7th among 4000 teams around the world in a 24-hour programming competition held by IEEE.
+
+- award: The National Gold Medalist ICPC Asia Jakarta
+  organization: ICPC
+  year: 2019
+  summary: Awarded a Gold Medal for the national category in ICPC Asia Jakarta 2019 from around 70 finalists in Asia.
+
+- award: 1st Winner ICPC Provincial Maranatha
+  organization: Maranatha University
+  year: 2019
+  summary: Got 1st place in ICPC Provincial round from around 100 national participants in Indonesia.
+
+- award: 2nd Winner Senior Competitive Programming Contest
+  organization: University of Indonesia
+  year: 2019
+  summary: Got 2nd place in Senior Competitive Programming Contest from the Compfest event, one of the prestigious computer festivals for college students in Indonesia.
+
+- award: The National Winners ACM ICPC Asia Jakarta
+  organization: ICPC
+  year: 2019
+  summary: Selected as one of the national winners from around 70 finalists in this prestigious programming competition for college students in Indonesia and SEA.
+
+- award: Silver Medal in National Science Olympiad in Informatics
+  organization: Ministry of Education
+  year: 2016
+  summary: Got silver medal (ranked 12) from around 80 national finalists in the largest science competition held by the Indonesia Ministry of Education.

@@ -1,15 +1,12 @@
 # Associations
 # comment out the urls if you do not wish to display them
 
-- organization: PETA
-  role: Volunteer
-  year: 2001 &mdash; 2010
-  url: https://www.peta.org/
-  summary: Organized fund drives and participated in fundraising events for the benefit of PETA's local Springfield operations.
+- organization: HMIF ITB
+  role: Head of Competition and Community Division
+  year: Feb 2020 — Apr 2021
+  summary: Responsible for disseminating information about Informatics competitions to HMIF members and improving their interest in competitions. Organized two HMIF Bootcamp programs to enhance ITB students' skills in various areas including Data Science, Competitive Programming, Capture the Flag, Game Development, and UI/UX.
 
-
-- organization: Yale Amnesty International
-  role: Communications coordinator
-  year: 2002 &mdash; 2004
-  url: http://campuspress.yale.edu/amnesty/
-  summary: During my junion and senior years at Yale, I was actively involved in Yale Amnesty International where I helped facilitate our student organization communications through website maintenance, writing for our campus publication, and graphic design of related materials.
+- organization: ARKAVIDIA 6.0
+  role: Head of Competitive Programming Competition
+  year: May 2019 — Feb 2020
+  summary: Led the competitive programming competition at Arkavidia 6.0, with responsibilities including problem setting, quality assurance, and infrastructure engineering for the competition server.

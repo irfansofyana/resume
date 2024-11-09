@@ -1,16 +1,32 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
-  # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+- project: Sheets-api
+  role: Developer
+  duration: Jan 2023 — Feb 2023
+  url: https://github.com/irfansofyana/sheets-api
+  description: A Google AppScript library enabling users to easily and freely make their Google Sheets API-accessible. Inspired by tools like SheetDB or Shitsu.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
-  # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+- project: Notify
+  role: Contributor
+  duration: Oct 2022 — Oct 2022
+  url: https://github.com/nikoksr/notify
+  description: An open-source Go library designed to dispatch notifications across multiple messaging services. Contributed to PR#415 which added an integration to Viber platform.
+
+- project: Web2markdown-api
+  role: Developer
+  duration: Oct 2022 — Oct 2022
+  url: https://github.com/irfansofyana/web2markdown-api
+  description: A serverless API crafted for converting web content into markdown format. Developed using Go and deployed on Vercel's serverless platform.
+
+- project: Instapaper-actions
+  role: Developer
+  duration: Sept 2022 — Sept 2022
+  url: https://github.com/irfansofyana/instapaper-actions
+  description: A GitHub action template allowing users to seamlessly add web content to their Instapaper accounts. Built using JavaScript and GitHub actions.
+
+- project: MySpendingBot
+  role: Developer
+  duration: Aug 2022 — Sept 2022
+  url: https://github.com/irfansofyana/MySpendingBot
+  description: A personal Telegram bot for tracking user spending, featuring capabilities to create, update, delete, and report expenses. Engineered using Google App Scripts, Google Sheets, and the Telegram API.
