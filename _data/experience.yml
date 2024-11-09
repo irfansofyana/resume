@@ -16,7 +16,7 @@
 - company: Xendit
   position: Software Engineer (L3 & L4 Software Engineer)
   duration: July 2021 — May 2023
-  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked on Xendit's SNAP merchant-facing API (Payment money-IN API like QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
+  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked on Xendit's SNAP merchant-facing Payment API (QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
   # items:
   #   - Spearheaded design and development of Xendit's SNAP Payments API
   #   - Led team of contractor engineers for HR automation solutions
@@ -26,7 +26,7 @@
 - company: Xendit
   position: Software Engineer (Intern – Part-time)
   duration: June 2020 — June 2021
-  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked directly with CTO on Engineering reliability metrics and reporting.
+  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked directly with CTO to establish Engineering reliability metrics and reporting.
   # items:
   #   - Implemented and visualized Engineering reliability metrics for monthly investor reports
   #   - Migrated local Engineering reliability data pipelines to cloud-based solution using Databricks
@@ -45,4 +45,4 @@
 - company: Private Olympiad Education Center
   position: Computer Olympiad Instructor
   duration: Aug 2017 - May 2020
-  summary: Taught middle and high school students about competitive programming and computer olympiad in several institutions such as ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, and the OSN Training Center. Successfully helped the students to get medals in National level from Bronze until Gold medal.
+  summary: Trained middle and high school students in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, and the OSN Training Center. Mentored students to achieve Bronze, Silver, and Gold medals at national-level competitions."
