@@ -4,10 +4,13 @@
   year: 2017 &mdash; 2021
   awards:
     - award: Cum Laude graduate
+    - award: Medalist and winner in several competitive programming competitions
   summary: Participated in many Programming competitions like ICPC, and others. Members of HMIF (Himpunan Mahasiswa Informatika) ITB.
 
-- degree: High School Diploma
+- degree: Senior High School
   uni: Pribadi Bilingual Boarding School Bandung
   year: 2017
-  award: The most successful student
+  awards:
+    - award: The most successful student
+    - award: National silver medalist in Computer Olympiad 2016 (OSN 2016)
   summary: Computer olympiad students. Head of Student Council.
