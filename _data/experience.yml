@@ -1,9 +1,10 @@
 # Jobs
-- company: Superbank Indonesia
+- company: PT Superbank Indonesia
+  summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank.
   positions:
-    - role: Software Engineer (Developer Experience)
+    - role: Senior Software Engineer (Backend DevEx)
       duration: June 2024 — Present
-      summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank. Helping engineers to be come more productive and happier by improving the developer experience.
+      summary: Joined as a Senior Software Engineer (Backend DevEx) at Superbank Indonesia. Working on a team is responsible to help engineers especially in the backend team to be come more productive and happier by improving the developer experience.
 
 - company: Xendit
   summary: Xendit is a fintech company that provides payment infrastructure for SEA.
@@ -21,12 +22,14 @@
       summary: Worked directly with CTO to establish Engineering reliability metrics and reporting.
 
 - company: Eduka System
+  summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia.
   positions:
     - role: Backend Engineer (Part-time)
       duration: Feb 2020 — March 2020
-      summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia. Developed backend services for an e-learning platform.
+      summary: Developed backend services for an e-learning platform.
 
 - company: Institut Teknologi Bandung
+  summary: Institut Teknologi Bandung is a leading university in Indonesia.
   positions:
     - role: Teaching Assistant
       duration: Jan 2020 — Dec 2020
