@@ -1,0 +1,20 @@
+{% if site.data.certifications %}
+<section class="content-section">
+  <header class="section-header">
+    <h2>Certifications</h2>
+  </header>
+
+  {% for certification in site.data.certifications %}
+  <div class="resume-item">
+    {% if certification.link %}
+    <h3 class="resume-item-title" itemprop="certification"><a href="{{ certification.link }}" target="_blank">{{ certification.name }}</a></h3>
+    {% else %}
+    <h3 class="resume-item-title" itemprop="certification">{{ certification.name }}</h3>
+    {% endif %}
+    <h4 class="resume-item-details">{{ certification.issuer }} &bull; {{ certification.date }}</h4>
+    <p class="resume-item-copy">{{ certification.details }}</p>
+  </div>
+  {% endfor %}
+
+</section>
+{% endif %}

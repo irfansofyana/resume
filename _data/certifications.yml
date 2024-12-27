@@ -1,0 +1,17 @@
+- name: "Certified Software Engineer"
+  issuer: "HackerRank"
+  details: "A certified software engineer from HackerRank"
+  link: "https://www.hackerrank.com/certificates/577c295fc3ad"
+  date: "2024"
+
+- name: "Backend Developer Graduate Program"
+  issuer: "Telkom Digital Talent Incubator Program"
+  details: "A certified backend developer from Telkom Digital Talent Incubator Program 2020"
+  link: "https://drive.google.com/file/d/1_BlGPgF0pC1iD0XHndzM_peJQ74pR2QU/view?usp=sharing"
+  date: "2020"
+
+- name: "Problem Solving (Advanced)"
+  issuer: "HackerRank"
+  details: "A certified problem solving (advanced) from HackerRank"
+  link: "https://www.hackerrank.com/certificates/443fb19bae39"
+  date: "2020"

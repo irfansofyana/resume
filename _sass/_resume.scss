@@ -135,23 +135,48 @@
 .content-section {
   margin: 0 0 3rem;
 
-  .resume-item { margin-bottom: 2rem; }
+  .resume-item {
+    margin-bottom: 2.5rem;
 
-  .resume-item-title {
-    @include sans_bold;
-    margin: 0 0 .75rem;
-    font-size: 1.5rem;
-    letter-spacing: -.05rem;
-    line-height: 1;
-  }
+    .resume-item-title {
+      @include sans_bold;
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+      letter-spacing: -.05rem;
+      line-height: 1;
+    }
 
-  .resume-item-details {
-    font-size: 1.125rem;
-    margin: 0 0 .75rem;
-    line-height: 1;
+    // Company summary styles
+    > .resume-item-copy {
+      margin: 0 0 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
 
-    &.award-title {
-      font-size: 1rem;
+    .resume-position {
+      margin-left: 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid #eee;
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume-item-details {
+        font-size: 1.125rem;
+        margin: 0 0 1rem;
+        line-height: 1.4;
+
+        &.award-title {
+          font-size: 1rem;
+        }
+      }
+
+      .resume-item-copy {
+        margin: 0;
+        line-height: 1.6;
+      }
     }
   }
 
@@ -172,6 +197,82 @@
   }
 
   .resume-item-copy { margin: .75rem 0 0; }
+}
+
+// Remove the custom certifications styles since we're using standard resume-item styles
+
+// Skills section styles
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  .skill-item {
+    margin-bottom: 0;
+    padding: 1.25rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-heading {
+      color: #333;
+      margin: 0 0 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .skill-description {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 50px;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      font-size: 0.9rem;
+      color: #495057;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #e9ecef;
+        border-color: #ced4da;
+      }
+    }
+  }
+}
+
+@media print {
+  .skills-grid {
+    display: block;
+
+    .skill-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      background: none;
+      border: none;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .skill-tag {
+        border: 1px solid #000;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
 }
 
 // footer styles

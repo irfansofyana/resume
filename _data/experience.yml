@@ -1,48 +1,39 @@
 # Jobs
 - company: Superbank Indonesia
-  position: Software Engineer (Developer Experience)
-  duration: June 2024 — Present
-  summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank. Helping engineers to be come more productive and happier by improving the developer experience.
+  positions:
+    - role: Software Engineer (Developer Experience)
+      duration: June 2024 — Present
+      summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank. Helping engineers to be come more productive and happier by improving the developer experience.
 
 - company: Xendit
-  position: Senior Software Engineer (L5 Software Engineer)
-  duration: May 2023 — June 2024
-  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development. Projects included like API Gateway & Authentication Platform for Open Banking Products, Consumer Open Banking service, eKYC, and more.
-  # items:
-  #   - Designed and developed API Gateway & Authentication Platform for Open Banking Products from scratch
-  #   - Built in-house Consumer Open Banking service with direct connection to Bank Partner's Core Banking
-  #   - Worked with technologies including Go, Typescript, Docker, Kubernetes, AWS, and more
+  summary: Xendit is a fintech company that provides payment infrastructure for SEA.
+  positions:
+    - role: Senior Software Engineer (L5 Software Engineer)
+      duration: May 2023 — June 2024
+      summary: Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development. Projects included like API Gateway & Authentication Platform for Open Banking Products, Consumer Open Banking service, eKYC, and more.
 
-- company: Xendit
-  position: Software Engineer (L3 & L4 Software Engineer)
-  duration: July 2021 — May 2023
-  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked on Xendit's SNAP merchant-facing Payment API (QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
-  # items:
-  #   - Spearheaded design and development of Xendit's SNAP Payments API
-  #   - Led team of contractor engineers for HR automation solutions
-  #   - Achieved top 3 rankings on internal OSS leaderboard for 2022
-  #   - Designed and implemented Engineering Scorecard reports automation system
+    - role: Software Engineer (L3 & L4 Software Engineer)
+      duration: July 2021 — May 2023
+      summary: Worked on Xendit's SNAP merchant-facing Payment API (QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
 
-- company: Xendit
-  position: Software Engineer (Intern – Part-time)
-  duration: June 2020 — June 2021
-  summary: Xendit is a fintech company that provides payment infrastructure for SEA. Worked directly with CTO to establish Engineering reliability metrics and reporting.
-  # items:
-  #   - Implemented and visualized Engineering reliability metrics for monthly investor reports
-  #   - Migrated local Engineering reliability data pipelines to cloud-based solution using Databricks
-  #   - Designed and implemented postmortem automation system for incident tracking
+    - role: Software Engineer (Intern – Part-time)
+      duration: June 2020 — June 2021
+      summary: Worked directly with CTO to establish Engineering reliability metrics and reporting.
 
 - company: Eduka System
-  position: Backend Engineer (Part-time)
-  duration: Feb 2020 — March 2020
-  summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia. Developed backend services for an e-learning platform.
+  positions:
+    - role: Backend Engineer (Part-time)
+      duration: Feb 2020 — March 2020
+      summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia. Developed backend services for an e-learning platform.
 
 - company: Institut Teknologi Bandung
-  position: Teaching Assistant
-  duration: Jan 2020 — Dec 2020
-  summary: Teaching assistant for fundamental programming and data structure & algorithm courses.
+  positions:
+    - role: Teaching Assistant
+      duration: Jan 2020 — Dec 2020
+      summary: Teaching assistant for fundamental programming and data structure & algorithm courses.
 
 - company: Private Olympiad Education Center
-  position: Computer Olympiad Instructor
-  duration: Aug 2017 - May 2020
-  summary: Trained middle and high school students in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, and the OSN Training Center. Mentored students to achieve Bronze, Silver, and Gold medals at national-level competitions."
+  positions:
+    - role: Computer Olympiad Instructor
+      duration: Aug 2017 - May 2020
+      summary: Trained middle and high school students in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, and the OSN Training Center. Mentored students to achieve Bronze, Silver, and Gold medals at national-level competitions.

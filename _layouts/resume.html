@@ -59,8 +59,16 @@
         {% for job in site.data.experience %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
           <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+          {% if job.summary %}
           <p class="resume-item-copy">{{ job.summary }}</p>
+          {% endif %}
+          
+          {% for position in job.positions %}
+          <div class="resume-position">
+            <h4 class="resume-item-details" itemprop="description">{{ position.role }} &bull; {{ position.duration }}</h4>
+            <p class="resume-item-copy">{{ position.summary }}</p>
+          </div>
+          {% endfor %}
         </div><!-- end of resume-item -->
         {% endfor %}
 
@@ -120,39 +128,37 @@
       {% if site.resume_section_skills %}
       <!-- begin Skills -->
       <section class="content-section">
-
         <header class="section-header">
           <h2>Skills</h2>
         </header>
-        {% for skill in site.data.skills %}
-        <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
+        
+        <div class="skills-grid">
+          {% for skill in site.data.skills %}
+          <div class="resume-item skill-item">
+            <h4 class="resume-item-details skill-heading">{{ skill.skill }}</h4>
+            <div class="skill-description">
+              {% assign technologies = skill.description | split: ", " %}
+              {% for tech in technologies %}
+              <span class="skill-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-
       </section>
       <!-- end Skills -->
       {% endif %}
 
       {% if site.resume_section_recognition %}
       <!-- begin Recognition -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Recognition</h2>
-        </header>
-
-        {% for recognition in site.data.recognitions %}
-        <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-          <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
-          <p class="resume-item-copy">{{ recognition.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
+      {% include recognition.html %}
       <!-- end Recognition -->
+      {% endif %}
+
+      {% if site.resume_section_certifications %}
+      <!-- begin Certifications -->
+      {% include certifications.html %}
+      <!-- end Certifications -->
       {% endif %}
 
       {% if site.resume_section_associations %}
