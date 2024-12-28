@@ -1,4 +1,3 @@
-# Jobs
 - company: PT Superbank Indonesia
   summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank.
   positions:
@@ -28,8 +27,8 @@
       duration: Feb 2020 — March 2020
       summary: Developed backend services for an e-learning platform.
 
-- company: Institut Teknologi Bandung
-  summary: Institut Teknologi Bandung is a leading university in Indonesia.
+- company: STEI ITB
+  summary: School of Electrical and Informatics Engineering (STEI) is one of the faculties at Institut Teknologi Bandung (ITB).
   positions:
     - role: Teaching Assistant
       duration: Jan 2020 — Dec 2020
