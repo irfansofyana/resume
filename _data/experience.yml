@@ -1,24 +1,75 @@
 - company: PT Superbank Indonesia
   summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank.
   positions:
-    - role: Senior Software Engineer (Backend DevEx)
+    - role: Software Engineer, Backend (DevEx) - Manager
       duration: June 2024 — Present
-      summary: Joined as a Senior Software Engineer (Backend DevEx) at Superbank Indonesia. Working on a team is responsible to help engineers especially in the backend team to be come more productive and happier by improving the developer experience.
+      summary: | 
+        Driving engineering excellence and productivity at Superbank through innovative developer tooling and streamlined processes. Focused on empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
+
+        <p> Some key achievements and responsibilities: </p>
+        <ul>
+          <li>Optimize CI/CD pipeline for Golang service using Athens Go Proxy. Reduce build time, unit test, and code-quality jobs around 80%</li>
+          <li>Led Gitlab migration for backend engineering team - 1 of the Superbank's top priority projects in 2025</li>
+          <li>Standardize CI/CD pipeline across teams, reducing complexity and maintenance overhead</li>
+          <li>Maintained golden images to be used by backend service</li>
+          <li>Spearheaded API standardization using modern tools like Apidog, OpenAPI, and Swagger for consistent design practice and better collaboration </li>
+          <li>Built automated backend unit test reporting system for governance and enhancing code quality</li>
+          <li>Integrating AI-powered code review tool during MR review process with Gitlab CI to improve quality of review and reduce manual work</li>
+          <li>Developed an intelligent slack bot with RAG capabilities to answer FAQ questions. Help employees to get faster response about common questions</li>
+          <li>Developed an internal URL shortener service to help employee memorize and share internal URLs</li>
+          <li>Conducted POC for distributed tracing using OpenTelemetry to enhance observability of the backend services</li>
+        <ul>
 
 - company: Xendit
   summary: Xendit is a fintech company that provides payment infrastructure for SEA.
   positions:
-    - role: Senior Software Engineer (L5 Software Engineer)
+    - role: Senior Software Engineer (L5)
       duration: May 2023 — June 2024
-      summary: Senior individual contributor in the Banking Experiment team, focused on innovating next-generation banking products, particularly consumer open banking products. Collaborated with Product Managers on requirements gathering, timeline estimation, and end-to-end development. Projects included like API Gateway & Authentication Platform for Open Banking Products, Consumer Open Banking service, eKYC, and more.
+      summary: |
+        Build experimental open banking products from 0 to 1 from consumer open banking products to corporate open banking products.
+        
+        <p> Some key achievements and responsibilities: </p>
+        
+        <ul>
+          <li> Helped the company to get approval from Bank Indonesia to launch Open Banking API by spearheaded the design and development of Open Banking API using BI SNAP API standard. </li>
+          <li> Improve reliability of the Open Banking API by migrating the Open Banking API Gateway to a new platform (TYK) from WSO2. Successfully improve reliability from 1-3 outage per month to 0 outage per month. </li>
+          <li> Enhance observability of the banking microservices by implementing metrics and tracing using OpenTelemetry, Prometheus, and Grafana. Leading to improved system monitoring and troubleshooting. </li>
+          <li> Developed microservices for Open Banking products such as auth platform, eKYC, webhook service, core banking middleware, and more. </li>
+          <li> Acted as one of the key engineering player in the successful launch of Nex Account product in collaboration with Bank Sahabat Sampoerna  https://wwww.nexapp.co/nexaccount. </li>
+        </ul>
 
-    - role: Software Engineer (L3 & L4 Software Engineer)
+    - role: Software Engineer (L3 & L4)
       duration: July 2021 — May 2023
-      summary: Worked on Xendit's SNAP merchant-facing Payment API (QRIS, Virtual Account, Direct Debit, etc) and led various development initiatives focused on internal automation while contributing to internal open-source software.
+      summary: | 
+        Worked on Xendit's company wide initiative and led various development initiatives focused on internal automation in engineering and HR department.
+
+        <p> Some key achievements and responsibilities: </p>
+        <ul>
+          <li> Contributed to compliance and adhere of Xendit to Bank Indonesia's SNAP API standard by developing and design Xendit's SNAP Payment API (QRIS, Virtual Account, Direct Debit, etc) to help merchants to integrate with Xendit using SNAP API standard. </li>
+          <li> Directed a multi-culturan team of 7 contractors (5 from Ukraine, 2 from Indonesia) to internal tech solutions for HR department. </li>
+          <ul>
+            <li> Developed an automation system to help HR automate performance review. Some of the process including calculating employee cost for company, auto generate performannce review document result for employee, and more. Reduce 80% of the manual work during performance review process for HR department. </li>
+            <li> Developed an automation system for resource provisioning and de-provisioning (Google Workspace and Slack) for trial candidates. Reduce manual work of Talent Acquisition team on handling trial candidates. </li>
+            <li> Developed an automation system for resource provisioning and de-provisioning (Google Workspace, Slack, Atlassian, LastPass, BambooHR) for new joiners. Helped the company and new joiner to onboard faster, more efficient, and more secure. </li>
+          </ul>
+          <li> Acting lead, Engineering Ops team </li>
+          <ul>
+            <li> Led the creation of an automation for generating engineering scorecard reports, integrating multiple data sources (postmortem, JIRA, sentry, pagerduty) to evaluate product and service performance.</li>
+            <li> Developed an automation for Engineering Managers to generate outcomes docs automatically for their direct reports, eliminating 100% of manual work.</li>
+            <li> Contributed to the development of an automated notification system to merchants for service status health. Improving early failure detection and reduce risk for money loss. </li>
+          </ul>
+        <ul>
 
     - role: Software Engineer (Intern – Part-time)
       duration: June 2020 — June 2021
-      summary: Worked directly with CTO to establish Engineering reliability metrics and reporting.
+      summary: | 
+        Worked directly with CTO to establish Engineering reliability metrics and reporting.
+
+        <p> Some key achievements and responsibilities: </p>
+        <ul>
+          <li> Developed an ETL pipeline using Airflow and Apache Spark that integrate multiple sources of data and load it to our data warehouse. </li>
+          <li> Created dashboard and visualization in Looker to help company to monitor the reliability metrics. </li>
+        </ul>
 
 - company: Eduka System
   summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia.
@@ -38,4 +89,8 @@
   positions:
     - role: Computer Olympiad Instructor
       duration: Aug 2017 - May 2020
-      summary: Trained middle and high school students in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, and the OSN Training Center. Mentored students to achieve Bronze, Silver, and Gold medals at national-level competitions.
+      summary: | 
+        Trained middle and high school students in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, West Java Province, and the OSN Training Center. 
+        Mentored students to achieve Bronze, Silver, and Gold medals at national-level competitions.
+        
+        <p> Some of my students achievement in National Olympiad in Informatics (OSN Informatika) from 2017-2020: 3 Golds, 1 Silvers, 5 Bronze Medals. </p>
