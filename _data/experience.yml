@@ -3,94 +3,82 @@
   positions:
     - role: Software Engineer, Backend (DevEx) - Manager
       duration: June 2024 — Present
-      summary: | 
-        Driving engineering excellence and productivity at Superbank through innovative developer tooling and streamlined processes. Focused on empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
-
-        <p> Some key achievements and responsibilities: </p>
+      summary: |
+        Driving engineering excellence and productivity initiatives at Superbank through innovative developer tooling and streamlined processes. Empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
+        <p> Key achievements and responsibilities: </p>
         <ul>
-          <li>Optimize CI/CD pipeline for Golang service using Athens Go Proxy. Reduce build time, unit test, and code-quality jobs around 80%</li>
-          <li>Led Gitlab migration for backend engineering team - 1 of the Superbank's top priority projects in 2025</li>
-          <li>Standardize CI/CD pipeline across teams, reducing complexity and maintenance overhead</li>
-          <li>Maintained golden images to be used by backend service</li>
-          <li>Spearheaded API standardization using modern tools like Apidog, OpenAPI, and Swagger for consistent design practice and better collaboration </li>
-          <li>Built automated backend unit test reporting system for governance and enhancing code quality</li>
-          <li>Integrating AI-powered code review tool during MR review process with Gitlab CI to improve quality of review and reduce manual work</li>
-          <li>Developed an intelligent slack bot with RAG capabilities to answer FAQ questions. Help employees to get faster response about common questions</li>
-          <li>Developed an internal URL shortener service to help employee memorize and share internal URLs</li>
-          <li>Conducted POC for distributed tracing using OpenTelemetry to enhance observability of the backend services</li>
-        <ul>
-
+          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an 80% reduction in duration time for buld, unit tests and code quality jobs</li>
+          <li>Leading GitLab migration initiative for the backend engineering team—one of Superbank's top strategic priorities for 2025</li>
+          <li>Standardized CI/CD pipelines across all teams, significantly reducing complexity and maintenance overhead</li>
+          <li>Developed and maintained golden images as foundational base for backend services</li>
+          <li>Spearheaded API standardization initiative using modern tools including Apidog, OpenAPI, and Swagger to ensure consistent design  and documentationpractices and enhanced cross-team collaboration</li>
+          <li>Implemented automated backend unit test reporting system, improving governance and code quality standards</li>
+          <li>Integrated AI-powered code review tools into GitLab CI pipeline, enhancing review quality while reducing manual effort</li>
+          <li>Developed intelligent Slack bot with RAG capabilities for FAQ automation, enabling faster employee support and reducing response times</li>
+          <li>Developed internal URL shortener service to streamline internal resource sharing and improve accessibility</li>
+          <li>Conducted proof-of-concept implementation for distributed tracing using OpenTelemetry, enhancing system observability capabilities</li>
+        </ul>
 - company: Xendit
-  summary: Xendit is a fintech company that provides payment infrastructure for SEA.
+  summary: Xendit is a leading fintech company providing comprehensive payment infrastructure across Southeast Asia.
   positions:
     - role: Senior Software Engineer (L5)
       duration: May 2023 — June 2024
       summary: |
-        Build experimental open banking products from 0 to 1 from consumer open banking products to corporate open banking products.
-        
-        <p> Some key achievements and responsibilities: </p>
-        
+        Built experimental open banking products from 0 to 1, spanning both consumer and corporate banking products.
+        <p> Key achievements and responsibilities: </p>
         <ul>
-          <li> Helped the company to get approval from Bank Indonesia to launch Open Banking API by spearheaded the design and development of Open Banking API using BI SNAP API standard. </li>
-          <li> Improve reliability of the Open Banking API by migrating the Open Banking API Gateway to a new platform (TYK) from WSO2. Successfully improve reliability from 1-3 outage per month to 0 outage per month. </li>
-          <li> Enhance observability of the banking microservices by implementing metrics and tracing using OpenTelemetry, Prometheus, and Grafana. Leading to improved system monitoring and troubleshooting. </li>
-          <li> Developed microservices for Open Banking products such as auth platform, eKYC, webhook service, core banking middleware, and more. </li>
-          <li> Acted as one of the key engineering player in the successful launch of Nex Account product in collaboration with Bank Sahabat Sampoerna  https://wwww.nexapp.co/nexaccount. </li>
+          <li>Instrumental in securing Bank Indonesia approval for Open Banking API launch by architecting and developing compliant solutions using BI SNAP API standards</li>
+          <li>Dramatically improved Open Banking API reliability by migrating the API Gateway from WSO2 to TYK platform, eliminating monthly outages (reduced from 1-3 incidents to zero)</li>
+          <li>Enhanced system observability across banking microservices by implementing comprehensive monitoring using OpenTelemetry, Prometheus, and Grafana stack</li>
+          <li>Architected and developed critical microservices including api gateway, authentication platform, eKYC system, webhook services, and core banking middleware</li>
+          <li>Served as key technical contributor to successful launch of Nex Account product in partnership with Bank Sahabat Sampoerna: https://www.nexapp.co/nexaccount</li>
         </ul>
-
     - role: Software Engineer (L3 & L4)
       duration: July 2021 — May 2023
-      summary: | 
-        Worked on Xendit's company wide initiative and led various development initiatives focused on internal automation in engineering and HR department.
-
-        <p> Some key achievements and responsibilities: </p>
+      summary: |
+        Contributed to company-wide engineering initiatives and led automation projects across engineering and HR departments, managing cross-functional teams and delivering scalable solutions.
+        <p> Key achievements and responsibilities: </p>
         <ul>
-          <li> Contributed to compliance and adhere of Xendit to Bank Indonesia's SNAP API standard by developing and design Xendit's SNAP Payment API (QRIS, Virtual Account, Direct Debit, etc) to help merchants to integrate with Xendit using SNAP API standard. </li>
-          <li> Directed a multi-culturan team of 7 contractors (5 from Ukraine, 2 from Indonesia) to internal tech solutions for HR department. </li>
+          <li>Ensured Xendit's compliance with Bank Indonesia's SNAP API standards by architecting and developing SNAP Payment API solutions (QRIS, Virtual Account, Ewallet, Direct Debit), enabling seamless merchant integration with standardized interface. Related work: https://developers.xendit.co/api-reference/#bi-snap</li>
+          <li>Successfully managed multicultural team of 7 contractors (5 Ukraine-based, 2 Indonesia-based) to deliver comprehensive internal HR department automation solutions:</li>
           <ul>
-            <li> Developed an automation system to help HR automate performance review. Some of the process including calculating employee cost for company, auto generate performannce review document result for employee, and more. Reduce 80% of the manual work during performance review process for HR department. </li>
-            <li> Developed an automation system for resource provisioning and de-provisioning (Google Workspace and Slack) for trial candidates. Reduce manual work of Talent Acquisition team on handling trial candidates. </li>
-            <li> Developed an automation system for resource provisioning and de-provisioning (Google Workspace, Slack, Atlassian, LastPass, BambooHR) for new joiners. Helped the company and new joiner to onboard faster, more efficient, and more secure. </li>
+            <li>Engineered performance review automation system including cost calculations and automated document generation, reducing HR manual workload by xx%</li>
+            <li>Developed automated account provisioning/de-provisioning workflows for trial candidates (Google Workspace, Slack), streamlining Talent Acquisition operations</li>
+            <li>Developed automated account provisioning system eliminating manual HR work for new joiner setup across multiple platforms (Google Workspace, Slack, Atlassian, LastPass, BambooHR), reducing manual operations by 90% while significantly improving employee onboarding experience and enabling day-one productivity</li>
           </ul>
-          <li> Acting lead, Engineering Ops team </li>
+          <li>Served as Acting Lead for Engineering Operations team:</li>
           <ul>
-            <li> Led the creation of an automation for generating engineering scorecard reports, integrating multiple data sources (postmortem, JIRA, sentry, pagerduty) to evaluate product and service performance.</li>
-            <li> Developed an automation for Engineering Managers to generate outcomes docs automatically for their direct reports, eliminating 100% of manual work.</li>
-            <li> Contributed to the development of an automated notification system to merchants for service status health. Improving early failure detection and reduce risk for money loss. </li>
+            <li>Developed and architected automated generation of engineering scorecard report integrating multiple data sources (postmortems, JIRA, Sentry, PagerDuty, DataDog) for comprehensive reliability and performance evaluation</li>
+            <li>Built intelligent automation enabling Engineering Managers to generate customized outcomes documents for evaluating their direct reports, automatically creating personalized document based on each direct report's current level and career track, eliminating 100% of manual document preparation work</li>
+            <li>Contributed to the development of a proactive merchant notification system for service health monitoring, improving incident response and minimizing financial risk exposure</li>
           </ul>
-        <ul>
-
+        </ul>
     - role: Software Engineer (Intern – Part-time)
       duration: June 2020 — June 2021
-      summary: | 
-        Worked directly with CTO to establish Engineering reliability metrics and reporting.
-
-        <p> Some key achievements and responsibilities: </p>
+      summary: |
+        Collaborated directly with CTO to establish foundational engineering reliability metrics and reporting infrastructure.
+        <p> Key achievements and responsibilities: </p>
         <ul>
-          <li> Developed an ETL pipeline using Airflow and Apache Spark that integrate multiple sources of data and load it to our data warehouse. </li>
-          <li> Created dashboard and visualization in Looker to help company to monitor the reliability metrics. </li>
+          <li>Designed and implemented ETL pipeline using Airflow and Apache Spark, integrating multiple data sources into centralized data warehouse</li>
+          <li>Developed comprehensive dashboards and visualizations in Looker, enabling real-time monitoring of critical reliability metrics</li>
         </ul>
-
 - company: Eduka System
-  summary: Eduka System is a startup that provides e-learning services for high school students in Indonesia.
+  summary: Eduka System is an innovative startup providing comprehensive e-learning solutions for Indonesian high school students.
   positions:
     - role: Backend Engineer (Part-time)
       duration: Feb 2020 — March 2020
-      summary: Developed backend services for an e-learning platform.
-
+      summary: Developed scalable backend services for comprehensive e-learning platform.
 - company: STEI ITB
-  summary: School of Electrical and Informatics Engineering (STEI) is one of the faculties at Institut Teknologi Bandung (ITB).
+  summary: School of Electrical Engineering and Informatics (STEI) at Institut Teknologi Bandung (ITB)
   positions:
     - role: Teaching Assistant
       duration: Jan 2020 — Dec 2020
-      summary: Teaching assistant for fundamental programming and data structure & algorithm courses.
-
+      summary: Provided instructional support for fundamental programming and data structures & algorithms courses, mentoring students in core computer science concepts.
 - company: Private Olympiad Education Center
   positions:
     - role: Computer Olympiad Instructor
       duration: Aug 2017 - May 2020
-      summary: | 
-        Trained middle and high school students in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, West Java Province, and the OSN Training Center. 
-        Mentored students to achieve Bronze, Silver, and Gold medals at national-level competitions.
-        
-        <p> Some of my students achievement in National Olympiad in Informatics (OSN Informatika) from 2017-2020: 3 Golds, 1 Silvers, 5 Bronze Medals. </p>
+      summary: |
+        Delivered specialized training in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, West Java Province, and the OSN Training Center.
+        Mentored students to achieve exceptional results in national-level competitions, consistently producing medal winners.
+        <p> Notable student achievements in National Olympiad in Informatics (OSN Informatika) 2017-2020: 3 Gold medals, 1 Silver medal, and 5 Bronze medals. </p>
