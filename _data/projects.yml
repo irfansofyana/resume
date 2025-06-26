@@ -5,7 +5,7 @@
   role: Contributor
   duration: May 2025 — May 2025
   url: https://github.com/qodo-ai/pr-agent
-  description: PR agent is a An AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (https://github.com/qodo-ai/pr-agent/pull/1744) to support models from OpenRouter provider.
+  description: PR agent is an AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (https://github.com/qodo-ai/pr-agent/pull/1744) to support models from OpenRouter provider.
 
 - project: devtools
   role: Maintainer
@@ -23,7 +23,7 @@
   role: Maintainer
   duration: Jan 2023 — Feb 2023
   url: https://github.com/irfansofyana/sheets-api
-  description: A Google AppScript library enabling users to easily and freely make their Google Sheets API-accessible. Inspired by tools like SheetDB or Shitsu.
+  description: A Google AppScript library enabling users to easily and freely make their Google Sheets API-accessible. Inspired by tools like SheetDB or Sheetsu.
 
 - project: Notify
   role: Contributor

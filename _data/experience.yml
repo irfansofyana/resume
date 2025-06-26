@@ -7,11 +7,11 @@
         Driving engineering excellence and productivity initiatives at Superbank through innovative developer tooling and streamlined processes. Empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
         <p> Key achievements and responsibilities: </p>
         <ul>
-          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an 80% reduction in duration time for buld, unit tests and code quality jobs</li>
+          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an 80% reduction in duration time for build, unit tests and code quality jobs</li>
           <li>Leading GitLab migration initiative for the backend engineering team—one of Superbank's top strategic priorities for 2025</li>
           <li>Standardized CI/CD pipelines across all teams, significantly reducing complexity and maintenance overhead</li>
           <li>Developed and maintained golden images as foundational base for backend services</li>
-          <li>Spearheaded API standardization initiative using modern tools including Apidog, OpenAPI, and Swagger to ensure consistent design  and documentationpractices and enhanced cross-team collaboration</li>
+          <li>Spearheaded API standardization initiative using modern tools including Apidog, OpenAPI, and Swagger to ensure consistent design and documentation practices and enhanced cross-team collaboration</li>
           <li>Implemented automated backend unit test reporting system, improving governance and code quality standards</li>
           <li>Integrated AI-powered code review tools into GitLab CI pipeline, enhancing review quality while reducing manual effort</li>
           <li>Developed intelligent Slack bot with RAG capabilities for FAQ automation, enabling faster employee support and reducing response times</li>
