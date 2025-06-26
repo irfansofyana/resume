@@ -7,11 +7,11 @@
         Driving engineering excellence and productivity initiatives at Superbank through innovative developer tooling and streamlined processes. Empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
         <p> Key achievements and responsibilities: </p>
         <ul>
-          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an 80% reduction in duration time for buld, unit tests and code quality jobs</li>
+          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an 80% reduction in duration time for build, unit tests and code quality jobs</li>
           <li>Leading GitLab migration initiative for the backend engineering team—one of Superbank's top strategic priorities for 2025</li>
           <li>Standardized CI/CD pipelines across all teams, significantly reducing complexity and maintenance overhead</li>
           <li>Developed and maintained golden images as foundational base for backend services</li>
-          <li>Spearheaded API standardization initiative using modern tools including Apidog, OpenAPI, and Swagger to ensure consistent design  and documentationpractices and enhanced cross-team collaboration</li>
+          <li>Spearheaded comprehensive API development lifecycle standardization initiative covering design, documentation, mocking, and testing using modern tools including Apidog, OpenAPI, and Swagger to ensure consistent practices, accelerate development velocity, reduce integration time, and enhance cross-team collaboration</li>
           <li>Implemented automated backend unit test reporting system, improving governance and code quality standards</li>
           <li>Integrated AI-powered code review tools into GitLab CI pipeline, enhancing review quality while reducing manual effort</li>
           <li>Developed intelligent Slack bot with RAG capabilities for FAQ automation, enabling faster employee support and reducing response times</li>
@@ -28,7 +28,7 @@
         <p> Key achievements and responsibilities: </p>
         <ul>
           <li>Instrumental in securing Bank Indonesia approval for Open Banking API launch by architecting and developing compliant solutions using BI SNAP API standards</li>
-          <li>Dramatically improved Open Banking API reliability by migrating the API Gateway from WSO2 to TYK platform, eliminating monthly outages (reduced from 1-3 incidents to zero)</li>
+          <li>Successfully improved Open Banking API reliability by migrating the API Gateway from WSO2 to TYK platform, eliminating monthly outages (reduced from 1-3 incidents to zero)</li>
           <li>Enhanced system observability across banking microservices by implementing comprehensive monitoring using OpenTelemetry, Prometheus, and Grafana stack</li>
           <li>Architected and developed critical microservices including api gateway, authentication platform, eKYC system, webhook services, and core banking middleware</li>
           <li>Served as key technical contributor to successful launch of Nex Account product in partnership with Bank Sahabat Sampoerna: https://www.nexapp.co/nexaccount</li>
@@ -82,3 +82,4 @@
         Delivered specialized training in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, West Java Province, and the OSN Training Center.
         Mentored students to achieve exceptional results in national-level competitions, consistently producing medal winners.
         <p> Notable student achievements in National Olympiad in Informatics (OSN Informatika) 2017-2020: 3 Gold medals, 1 Silver medal, and 5 Bronze medals. </p>
+
