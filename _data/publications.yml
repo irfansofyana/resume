@@ -1,0 +1,10 @@
+# Publications
+# uncomment the urls if you wish to display them, and add your own URL
+
+- title: "Abstract Syntax Tree (AST) and Control Flow Graph (CFG) Construction of Notasi Algoritmik"
+  authors: "Irfan Sofyana Putra, Satrio Adi Rukmono, Riza Satria Perdana"
+  venue: "2021 International Conference on Data and Software Engineering (ICoDSE 2021)"
+  year: "2021"
+  type: "Conference Paper"
+  url: "https://ieeexplore.ieee.org/abstract/document/9648437"
+  description: "Published a paper about how to construct Abstract Syntax Tree (AST) and Control Flow Graph (CFG) from a Notasi Algoritmik for automated grader development. Presented this paper at the 2021 International Conference on Data and Software Engineering (ICoDSE 2021)."

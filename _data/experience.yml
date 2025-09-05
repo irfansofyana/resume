@@ -7,7 +7,7 @@
         Driving engineering excellence and productivity initiatives at Superbank through innovative developer tooling and streamlined processes. Empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
         <p> Key achievements and responsibilities: </p>
         <ul>
-          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an 80% reduction in duration time for build, unit tests and code quality jobs</li>
+          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an xx% reduction in duration time for build, unit tests and code quality jobs</li>
           <li>Leading GitLab migration initiative for the backend engineering team—one of Superbank's top strategic priorities for 2025</li>
           <li>Standardized CI/CD pipelines across all teams, significantly reducing complexity and maintenance overhead</li>
           <li>Developed and maintained golden images as foundational base for backend services</li>
@@ -44,7 +44,7 @@
           <ul>
             <li>Engineered performance review automation system including cost calculations and automated document generation, reducing HR manual workload by xx%</li>
             <li>Developed automated account provisioning/de-provisioning workflows for trial candidates (Google Workspace, Slack), streamlining Talent Acquisition operations</li>
-            <li>Developed automated account provisioning system eliminating manual HR work for new joiner setup across multiple platforms (Google Workspace, Slack, Atlassian, LastPass, BambooHR), reducing manual operations by 90% while significantly improving employee onboarding experience and enabling day-one productivity</li>
+            <li>Developed automated account provisioning system eliminating manual HR work for new joiner setup across multiple platforms (Google Workspace, Slack, Atlassian, LastPass, BambooHR), reducing manual operations by xx% while significantly improving employee onboarding experience and enabling day-one productivity</li>
           </ul>
           <li>Served as Acting Lead for Engineering Operations team:</li>
           <ul>

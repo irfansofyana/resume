@@ -19,6 +19,7 @@
         {% if site.resume_section_experience %}<li><a href="#experience" data-section="experience">Experience</a></li>{% endif %}
         {% if site.resume_section_education %}<li><a href="#education" data-section="education">Education</a></li>{% endif %}
         {% if site.resume_section_projects %}<li><a href="#projects" data-section="projects">Projects</a></li>{% endif %}
+        {% if site.resume_section_publications %}<li><a href="#publications" data-section="publications">Publications</a></li>{% endif %}
         {% if site.resume_section_skills %}<li><a href="#skills" data-section="skills">Skills</a></li>{% endif %}
         {% if site.resume_section_recognition %}<li><a href="#recognition" data-section="recognition">Recognition</a></li>{% endif %}
         {% if site.resume_section_certifications %}<li><a href="#certifications" data-section="certifications">Certifications</a></li>{% endif %}
@@ -147,6 +148,26 @@
       <!-- end Projects -->
       {% endif %}
 
+      {% if site.resume_section_publications %}
+      <!-- begin Publications -->
+      <section class="content-section" id="publications">
+
+        <header class="section-header">
+          <h2>Publications</h2>
+        </header>
+
+        {% for publication in site.data.publications %}
+        <div class="resume-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
+          <h3 class="resume-item-title" itemprop="name">{% if publication.url %}<a href="{{ publication.url }}" itemprop="url">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
+          <h4 class="resume-item-details" itemprop="description">{{ publication.authors }} &bull; {{ publication.venue }} &bull; {{ publication.year }}</h4>
+          <p class="resume-item-copy">{{ publication.description }}</p>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end Publications -->
+      {% endif %}
+
       {% if site.resume_section_skills %}
       <!-- begin Skills -->
       <section class="content-section" id="skills">
@@ -165,6 +186,7 @@
       </section>
       <!-- end Skills -->
       {% endif %}
+
 
       {% if site.resume_section_recognition %}
       <!-- begin Recognition -->
