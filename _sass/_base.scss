@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  @include serif;
+  font-family: $body-font;
   color: $text_color;
-  font-size: 16px;
+  font-size: $body-font-size;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +31,7 @@ body {
 
 // Professional typography hierarchy
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: $heading-font;
   font-weight: 600;
   line-height: 1.25;
   margin: 0;
