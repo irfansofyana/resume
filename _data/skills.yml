@@ -3,7 +3,7 @@
 - skill: Domain Knowledge
   description: Banking, Payment Gateway, Developer Experience, Automation, Data structure & algorithm
 
-- skill: Programming languages & scripting
+- skill: Programming Languages & Scripting
   description: Go, Python, Javascript (Node.js), Typescript, C++, Java, Bash
 
 - skill: Database
@@ -12,7 +12,7 @@
 - skill: Cloud Platform
   description: AWS, GCP
 
-- skill: Messaging systems
+- skill: Messaging Systems
   description: Kafka, AWS SQS, RabbitMQ, NATS
 
 - skill: Containerization & Infrastructure as Code

@@ -201,75 +201,87 @@
 
 // Remove the custom certifications styles since we're using standard resume-item styles
 
-// Skills section styles
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+// Skills section - minimalist text-based design
+.skills-list {
   margin-top: 1rem;
 
-  .skill-item {
-    margin-bottom: 0;
-    padding: 1.25rem;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .skill-category {
+    margin-bottom: 2rem;
+    
+    &:last-child {
+      margin-bottom: 0;
     }
 
     .skill-heading {
+      @include sans_bold;
+      font-size: 1.125rem;
       color: #333;
-      margin: 0 0 1rem;
-      font-size: 1.1rem;
-      font-weight: 600;
+      margin: 0 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e0e0e0;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 2rem;
+        height: 1px;
+        background-color: #333;
+      }
     }
 
-    .skill-description {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .skill-technologies {
+      line-height: 1.6;
+      color: #555;
+      font-size: 1rem;
+      
+      @include media_larger_than_mobile {
+        font-size: 1.0625rem;
+      }
     }
+  }
 
-    .skill-tag {
-      display: inline-block;
-      padding: 0.35rem 0.75rem;
-      border-radius: 50px;
-      background-color: #fff;
-      border: 1px solid #dee2e6;
-      font-size: 0.9rem;
-      color: #495057;
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-        background-color: #e9ecef;
-        border-color: #ced4da;
+  // Enhanced spacing for mobile
+  @media (max-width: 480px) {
+    margin-top: 1.5rem;
+    
+    .skill-category {
+      margin-bottom: 1.75rem;
+      
+      .skill-heading {
+        font-size: 1rem;
+      }
+      
+      .skill-technologies {
+        font-size: 0.9375rem;
       }
     }
   }
 }
 
 @media print {
-  .skills-grid {
-    display: block;
-
-    .skill-item {
+  .skills-list {
+    margin-top: 0.5rem;
+    
+    .skill-category {
       margin-bottom: 1rem;
-      padding: 0;
-      background: none;
-      border: none;
-
-      &:hover {
-        transform: none;
-        box-shadow: none;
+      page-break-inside: avoid;
+      
+      .skill-heading {
+        font-size: 0.9375rem;
+        margin-bottom: 0.375rem;
+        border-bottom-color: #ccc;
+        
+        &::after {
+          display: none;
+        }
       }
-
-      .skill-tag {
-        border: 1px solid #000;
-        margin-bottom: 0.25rem;
+      
+      .skill-technologies {
+        font-size: 0.875rem;
+        line-height: 1.4;
       }
     }
   }

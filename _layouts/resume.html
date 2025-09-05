@@ -132,16 +132,11 @@
           <h2>Skills</h2>
         </header>
         
-        <div class="skills-grid">
+        <div class="skills-list">
           {% for skill in site.data.skills %}
-          <div class="resume-item skill-item">
-            <h4 class="resume-item-details skill-heading">{{ skill.skill }}</h4>
-            <div class="skill-description">
-              {% assign technologies = skill.description | split: ", " %}
-              {% for tech in technologies %}
-              <span class="skill-tag">{{ tech }}</span>
-              {% endfor %}
-            </div>
+          <div class="skill-category">
+            <h3 class="skill-heading">{{ skill.skill }}</h3>
+            <p class="skill-technologies">{{ skill.description }}</p>
           </div>
           {% endfor %}
         </div>
