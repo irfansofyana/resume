@@ -16,7 +16,7 @@
   <meta name="description" content="Irfan's Resume">
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://0.0.0.0:4000/">
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSLF30SZ0L"></script>
@@ -31,6 +31,28 @@
 
 
   <body class="theme-default">
+
+    <!-- Table of Contents Navigation -->
+    <nav class="table-of-contents no-print" id="toc">
+      <div class="toc-header">
+        <h3>Contents</h3>
+        <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <ul class="toc-list" id="toc-list">
+        <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#education" data-section="education">Education</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#recognition" data-section="recognition">Recognition</a></li>
+        <li><a href="#certifications" data-section="certifications">Certifications</a></li>
+        <li><a href="#associations" data-section="associations">Associations</a></li>
+        <li><a href="#links" data-section="links">Links</a></li>
+      </ul>
+    </nav>
 
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="telephone" content="-"/>
@@ -188,7 +210,7 @@
 
       
       <!-- begin Experience -->
-      <section class="content-section">
+      <section class="content-section" id="experience">
 
         <header class="section-header">
           <h2>Experience</h2>
@@ -239,7 +261,7 @@
   <li>Successfully improved Open Banking API reliability by migrating the API Gateway from WSO2 to TYK platform, eliminating monthly outages (reduced from 1-3 incidents to zero)</li>
   <li>Enhanced system observability across banking microservices by implementing comprehensive monitoring using OpenTelemetry, Prometheus, and Grafana stack</li>
   <li>Architected and developed critical microservices including api gateway, authentication platform, eKYC system, webhook services, and core banking middleware</li>
-  <li>Served as key technical contributor to successful launch of Nex Account product in partnership with Bank Sahabat Sampoerna: https://www.nexapp.co/nexaccount</li>
+  <li>Served as key technical contributor to successful launch of Nex Account product in partnership with Bank Sahabat Sampoerna: <a href="https://www.nexapp.co/nexaccount" target="_blank" rel="noopener noreferrer">https://www.nexapp.co/nexaccount</a></li>
 </ul>
 </p>
           </div>
@@ -249,7 +271,7 @@
             <p class="resume-item-copy">Contributed to company-wide engineering initiatives and led automation projects across engineering and HR departments, managing cross-functional teams and delivering scalable solutions.
 <p> Key achievements and responsibilities: </p>
 <ul>
-  <li>Ensured Xendit's compliance with Bank Indonesia's SNAP API standards by architecting and developing SNAP Payment API solutions (QRIS, Virtual Account, Ewallet, Direct Debit), enabling seamless merchant integration with standardized interface. Related work: https://developers.xendit.co/api-reference/#bi-snap</li>
+  <li>Ensured Xendit's compliance with Bank Indonesia's SNAP API standards by architecting and developing SNAP Payment API solutions (QRIS, Virtual Account, Ewallet, Direct Debit), enabling seamless merchant integration with standardized interface. Related work: <a href="https://developers.xendit.co/api-reference/#bi-snap" target="_blank" rel="noopener noreferrer">https://developers.xendit.co/api-reference/#bi-snap</a></li>
   <li>Successfully managed multicultural team of 7 contractors (5 Ukraine-based, 2 Indonesia-based) to deliver comprehensive internal HR department automation solutions:</li>
   <ul>
     <li>Engineered performance review automation system including cost calculations and automated document generation, reducing HR manual workload by xx%</li>
@@ -330,7 +352,7 @@ Mentored students to achieve exceptional results in national-level competitions,
 
       
       <!-- begin Education -->
-      <section class="content-section">
+      <section class="content-section" id="education">
         <header class="section-header">
           <h2>Education</h2>
         </header>
@@ -377,7 +399,7 @@ Mentored students to achieve exceptional results in national-level competitions,
 
       
       <!-- begin Projects -->
-      <section class="content-section">
+      <section class="content-section" id="projects">
         <header class="section-header">
           <h2>Projects</h2>
         </header>
@@ -387,14 +409,14 @@ Mentored students to achieve exceptional results in national-level competitions,
           <meta itemprop="creator" content="Irfan Sofyana Putra" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" itemprop="name"><a href="https://github.com/qodo-ai/pr-agent" itemprop="url">pr-agent</a></h3>
           <h4 class="resume-item-details" itemprop="description">Contributor  &bull; May 2025 — May 2025</h4>
-          <p class="resume-item-copy">PR agent is an AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (https://github.com/qodo-ai/pr-agent/pull/1744) to support models from OpenRouter provider.</p>
+          <p class="resume-item-copy">PR agent is an AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (<a href="https://github.com/qodo-ai/pr-agent/pull/1744" target="_blank" rel="noopener noreferrer">https://github.com/qodo-ai/pr-agent/pull/1744</a>) to support models from OpenRouter provider.</p>
         </div>
         
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="Irfan Sofyana Putra" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" itemprop="name"><a href="https://github.com/irfansofyana/devtools" itemprop="url">devtools</a></h3>
           <h4 class="resume-item-details" itemprop="description">Maintainer  &bull; April 2025 — Present</h4>
-          <p class="resume-item-copy">A comprehensive collection of web-based tools for developers. This project provides a toolkit that developers can access via GitHub Pages to perform common development tasks more efficiently. Can be accessed via https://devtools.irfansp.dev/</p>
+          <p class="resume-item-copy">A comprehensive collection of web-based tools for developers. This project provides a toolkit that developers can access via GitHub Pages to perform common development tasks more efficiently. Can be accessed via <a href="https://devtools.irfansp.dev/" target="_blank" rel="noopener noreferrer">https://devtools.irfansp.dev/</a></p>
         </div>
         
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -415,7 +437,7 @@ Mentored students to achieve exceptional results in national-level competitions,
           <meta itemprop="creator" content="Irfan Sofyana Putra" itemtype="http://schema.org/Person" />
           <h3 class="resume-item-title" itemprop="name"><a href="https://github.com/nikoksr/notify" itemprop="url">Notify</a></h3>
           <h4 class="resume-item-details" itemprop="description">Contributor  &bull; Oct 2022 — Oct 2022</h4>
-          <p class="resume-item-copy">An open-source Go library designed to dispatch notifications across multiple messaging services. Contributed to PR#415 (https://github.com/nikoksr/notify/pull/415) which added an integration to Viber platform.</p>
+          <p class="resume-item-copy">An open-source Go library designed to dispatch notifications across multiple messaging services. Contributed to PR#415 (<a href="https://github.com/nikoksr/notify/pull/415" target="_blank" rel="noopener noreferrer">https://github.com/nikoksr/notify/pull/415</a>) which added an integration to Viber platform.</p>
         </div>
         
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -439,7 +461,7 @@ Mentored students to achieve exceptional results in national-level competitions,
 
       
       <!-- begin Skills -->
-      <section class="content-section">
+      <section class="content-section" id="skills">
         <header class="section-header">
           <h2>Skills</h2>
         </header>
@@ -489,7 +511,7 @@ Mentored students to achieve exceptional results in national-level competitions,
       
       <!-- begin Recognition -->
       
-<section class="content-section">
+<section class="content-section" id="recognition">
   <header class="section-header">
     <h2>Recognition</h2>
   </header>
@@ -540,7 +562,7 @@ Mentored students to achieve exceptional results in national-level competitions,
       
       <!-- begin Certifications -->
       
-<section class="content-section">
+<section class="content-section" id="certifications">
   <header class="section-header">
     <h2>Certifications</h2>
   </header>
@@ -579,7 +601,7 @@ Mentored students to achieve exceptional results in national-level competitions,
 
       
       <!-- begin Associations -->
-      <section class="content-section">
+      <section class="content-section" id="associations">
 
         <header class="section-header">
           <h2>Associations</h2>
@@ -607,7 +629,7 @@ Mentored students to achieve exceptional results in national-level competitions,
 
       
       <!-- begin Links -->
-      <section class="content-section">
+      <section class="content-section" id="links">
 
         <header class="section-header">
           <h2>Additional Links</h2>
@@ -679,10 +701,13 @@ Mentored students to achieve exceptional results in national-level competitions,
       
 
       <footer class="page-footer">
-        <p class="footer-line">&copy; 2024. Template from <a href="https://github.com/jglovier/resume-template">resume-template</a>.</p>
+        <p class="footer-line">&copy; 2024. Forked from <a href="https://github.com/jglovier/resume-template">resume-template</a> by Joel Glovier, extensively modified.</p>
       </footer>
 
     </div>
+
+    <!-- Table of Contents JavaScript -->
+    <script src="/assets/js/toc.js"></script>
 
   </body>
 

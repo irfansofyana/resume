@@ -5,13 +5,13 @@
   role: Contributor
   duration: May 2025 — May 2025
   url: https://github.com/qodo-ai/pr-agent
-  description: PR agent is an AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (https://github.com/qodo-ai/pr-agent/pull/1744) to support models from OpenRouter provider.
+  description: PR agent is an AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (<a href="https://github.com/qodo-ai/pr-agent/pull/1744" target="_blank" rel="noopener noreferrer">https://github.com/qodo-ai/pr-agent/pull/1744</a>) to support models from OpenRouter provider.
 
 - project: devtools
   role: Maintainer
   duration: April 2025 — Present
   url: https://github.com/irfansofyana/devtools
-  description: A comprehensive collection of web-based tools for developers. This project provides a toolkit that developers can access via GitHub Pages to perform common development tasks more efficiently. Can be accessed via https://devtools.irfansp.dev/
+  description: A comprehensive collection of web-based tools for developers. This project provides a toolkit that developers can access via GitHub Pages to perform common development tasks more efficiently. Can be accessed via <a href="https://devtools.irfansp.dev/" target="_blank" rel="noopener noreferrer">https://devtools.irfansp.dev/</a>
 
 - project: llm-youtube
   role: Maintainer
@@ -29,7 +29,7 @@
   role: Contributor
   duration: Oct 2022 — Oct 2022
   url: https://github.com/nikoksr/notify
-  description: An open-source Go library designed to dispatch notifications across multiple messaging services. Contributed to PR#415 (https://github.com/nikoksr/notify/pull/415) which added an integration to Viber platform.
+  description: An open-source Go library designed to dispatch notifications across multiple messaging services. Contributed to PR#415 (<a href="https://github.com/nikoksr/notify/pull/415" target="_blank" rel="noopener noreferrer">https://github.com/nikoksr/notify/pull/415</a>) which added an integration to Viber platform.
 
 - project: Instapaper-actions
   role: Maintainer

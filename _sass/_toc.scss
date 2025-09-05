@@ -1,0 +1,176 @@
+// Table of Contents Styles
+// ---------------------------------------/
+
+.table-of-contents {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: $white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 220px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  
+  // Hide on smaller screens initially, show via toggle
+  @media (max-width: 1024px) {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    max-width: 180px;
+  }
+  
+  @media (max-width: 768px) {
+    top: 0.5rem;
+    right: 0.5rem;
+    max-width: 160px;
+    
+    // On mobile, collapse the list initially
+    &:not(.expanded) .toc-list {
+      display: none;
+    }
+    
+    &.expanded .toc-list {
+      display: block;
+    }
+  }
+
+  .toc-header {
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h3 {
+      margin: 0;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .toc-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 20px;
+      height: 16px;
+      position: relative;
+      padding: 0;
+      display: none; // Show only on mobile
+      
+      @media (max-width: 768px) {
+        display: block;
+      }
+      
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $black;
+        margin: 3px 0;
+        transition: all 0.2s ease;
+        transform-origin: center;
+        
+        &:first-child {
+          margin-top: 0;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      
+      &.active {
+        span:first-child {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        span:nth-child(2) {
+          opacity: 0;
+        }
+        
+        span:last-child {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
+  }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: $white;
+    border-radius: 0 0 4px 4px;
+    
+    li {
+      margin: 0;
+      
+      a {
+        display: block;
+        padding: 0.625rem 1rem;
+        color: #666;
+        text-decoration: none;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.2s ease;
+        position: relative;
+        min-height: 44px; // Better touch targets on mobile
+        display: flex;
+        align-items: center;
+        
+        @media (max-width: 768px) {
+          padding: 0.75rem 1rem;
+          font-size: 0.875rem;
+        }
+        
+        &:hover {
+          background: #f8f9fa;
+          color: $black;
+          padding-left: 1.25rem;
+        }
+        
+        &.active {
+          background: #f0f0f0;
+          color: $black;
+          font-weight: 500;
+          border-left: 3px solid $black;
+          padding-left: 1rem;
+        }
+      }
+      
+      &:last-child a {
+        border-bottom: none;
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+  
+  // Smooth scroll offset adjustment
+  @media (min-width: 769px) {
+    // For larger screens, add some breathing room from the right edge
+    right: max(2rem, calc((100vw - 800px) / 2 - 240px));
+    
+    // Hide if there's not enough space
+    @media (max-width: 1280px) {
+      right: 1rem;
+    }
+  }
+}
+
+// Scroll offset for smooth navigation
+html {
+  scroll-padding-top: 2rem;
+}
+
+// Additional spacing for section headers when navigating
+.content-section {
+  scroll-margin-top: 2rem;
+}

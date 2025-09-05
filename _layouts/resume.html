@@ -5,6 +5,28 @@
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
+    <!-- Table of Contents Navigation -->
+    <nav class="table-of-contents no-print" id="toc">
+      <div class="toc-header">
+        <h3>Contents</h3>
+        <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <ul class="toc-list" id="toc-list">
+        {% if site.resume_section_experience %}<li><a href="#experience" data-section="experience">Experience</a></li>{% endif %}
+        {% if site.resume_section_education %}<li><a href="#education" data-section="education">Education</a></li>{% endif %}
+        {% if site.resume_section_projects %}<li><a href="#projects" data-section="projects">Projects</a></li>{% endif %}
+        {% if site.resume_section_skills %}<li><a href="#skills" data-section="skills">Skills</a></li>{% endif %}
+        {% if site.resume_section_recognition %}<li><a href="#recognition" data-section="recognition">Recognition</a></li>{% endif %}
+        {% if site.resume_section_certifications %}<li><a href="#certifications" data-section="certifications">Certifications</a></li>{% endif %}
+        {% if site.resume_section_associations %}<li><a href="#associations" data-section="associations">Associations</a></li>{% endif %}
+        {% if site.resume_section_links %}<li><a href="#links" data-section="links">Links</a></li>{% endif %}
+      </ul>
+    </nav>
+
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
       <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
@@ -50,7 +72,7 @@
 
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
-      <section class="content-section">
+      <section class="content-section" id="experience">
 
         <header class="section-header">
           <h2>Experience</h2>
@@ -79,7 +101,7 @@
 
       {% if site.resume_section_education %}
       <!-- begin Education -->
-      <section class="content-section">
+      <section class="content-section" id="education">
         <header class="section-header">
           <h2>Education</h2>
         </header>
@@ -107,7 +129,7 @@
 
       {% if site.resume_section_projects %}
       <!-- begin Projects -->
-      <section class="content-section">
+      <section class="content-section" id="projects">
         <header class="section-header">
           <h2>Projects</h2>
         </header>
@@ -127,7 +149,7 @@
 
       {% if site.resume_section_skills %}
       <!-- begin Skills -->
-      <section class="content-section">
+      <section class="content-section" id="skills">
         <header class="section-header">
           <h2>Skills</h2>
         </header>
@@ -158,7 +180,7 @@
 
       {% if site.resume_section_associations %}
       <!-- begin Associations -->
-      <section class="content-section">
+      <section class="content-section" id="associations">
 
         <header class="section-header">
           <h2>Associations</h2>
@@ -198,7 +220,7 @@
 
       {% if site.resume_section_links %}
       <!-- begin Links -->
-      <section class="content-section">
+      <section class="content-section" id="links">
 
         <header class="section-header">
           <h2>Additional Links</h2>
@@ -233,10 +255,13 @@
       {% endif %}
 
       <footer class="page-footer">
-        <p class="footer-line">&copy; 2024. Template from <a href="https://github.com/jglovier/resume-template">resume-template</a>.</p>
+        <p class="footer-line">&copy; 2024. Forked from <a href="https://github.com/jglovier/resume-template">resume-template</a> by Joel Glovier, extensively modified.</p>
       </footer>
 
     </div>
+
+    <!-- Table of Contents JavaScript -->
+    <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 
   </body>
 

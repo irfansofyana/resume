@@ -10,8 +10,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `bundle exec jekyll build` - Build the static site
 
 ### Docker Development
-- `docker image build -t resume-template .` - Build Docker image
-- `docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template` - Run with Docker
+- `./run-docker.sh` - Build and run the Jekyll server using Docker (recommended)
+  - Automatically builds the Docker image
+  - Starts Jekyll server on http://localhost:4000
+  - Press Ctrl+C to stop
+- `docker image build -t resume-template .` - Build Docker image only
+- `docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template` - Run with Docker (manual)
 
 ## Architecture Overview
 
