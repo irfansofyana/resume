@@ -3,7 +3,7 @@
 
 - project: linkwarden-mcp-server
   role: Maintainer
-  duration: Oct 2025 — Present
+  duration: Oct 2025 — Oct 2025
   url: https://github.com/irfansofyana/linkwarden-mcp-server
   description: A Model Context Protocol (MCP) server that provides AI assistants with programmatic access to Linkwarden instances, a self-hosted bookmark management system. Features include managing collections, links, tags, full-text search, flexible tool selection, read-only mode for production, and Docker support. Built in Go with MCP client compatibility.
 
