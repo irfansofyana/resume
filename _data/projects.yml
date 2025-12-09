@@ -1,6 +1,18 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
+- project: litellm
+  role: Contributor
+  duration: Dec 2025 — Dec 2025
+  url: https://github.com/BerriAI/litellm
+  description: An open-source library that provides a unified interface to 100+ LLMs. Contributed to PR#17467 (<a href="https://github.com/BerriAI/litellm/pull/17467" target="_blank" rel="noopener noreferrer">https://github.com/BerriAI/litellm/pull/17467</a>) fixing a bug in AWS Bedrock integration where non-Anthropic models (Qwen, Llama, Nova) would fail with "unknown variant anthropic_beta" error. The fix ensures beta headers are only applied to Anthropic models.
+
+- project: devcontainer-features
+  role: Contributor
+  duration: Jan 2025 — Jan 2025
+  url: https://github.com/irfansofyana/devcontainer-features
+  description: A collection of custom Dev Container Features for reproducible development environments. Created two features officially documented at containers.dev (<a href="https://containers.dev/features" target="_blank" rel="noopener noreferrer">https://containers.dev/features</a>)&#58; kcat (Kafka command-line tool for Debian/Ubuntu containers) and lazydocker (terminal-based interface for Docker management). Built to streamline development setup and boost productivity.
+
 - project: linkwarden-mcp-server
   role: Maintainer
   duration: Oct 2025 — Oct 2025
