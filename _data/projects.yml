@@ -7,6 +7,12 @@
   url: https://github.com/BerriAI/litellm
   description: An open-source library that provides a unified interface to 100+ LLMs. Contributed to PR#17467 (<a href="https://github.com/BerriAI/litellm/pull/17467" target="_blank" rel="noopener noreferrer">https://github.com/BerriAI/litellm/pull/17467</a>) fixing a bug in AWS Bedrock integration where non-Anthropic models (Qwen, Llama, Nova) would fail with "unknown variant anthropic_beta" error. The fix ensures beta headers are only applied to Anthropic models.
 
+- project: yaccs
+  role: Maintainer
+  duration: Dec 2025 — Dec 2025
+  url: https://github.com/irfansofyana/yaccs
+  description: A CLI tool that eliminates the hassle of managing multiple LLM providers for Claude Code. Seamlessly switch between providers (OpenRouter, GLM, Chutes, etc.) with a single command, improving developer experience by removing the need to manually juggle environment variables or configuration files.
+
 - project: devcontainer-features
   role: Contributor
   duration: Jan 2025 — Jan 2025
