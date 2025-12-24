@@ -422,6 +422,13 @@
       color: #333;
     }
   }
+
+  .last-updated {
+    font-size: 0.875rem;
+    color: #999;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
 }
 
 .print-only { display: none !important }

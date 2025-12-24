@@ -278,6 +278,9 @@
 
       <footer class="page-footer">
         <p class="footer-line">&copy; 2024. Forked from <a href="https://github.com/jglovier/resume-template">resume-template</a> by Joel Glovier, extensively modified.</p>
+        {% if site.resume_show_last_updated %}
+        <p class="last-updated">Last updated: {{ site.resume_last_updated_date }}</p>
+        {% endif %}
       </footer>
 
     </div>
