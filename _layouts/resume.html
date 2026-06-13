@@ -174,14 +174,12 @@
           <h2>Open Source &amp; Projects</h2>
         </header>
 
-        {% assign featured_projects = site.data.projects | where: "featured", true %}
-        {% if featured_projects.size > 0 %}
-        <div class="featured-projects">
-          {% for project in featured_projects %}
+        <div class="project-grid">
+          {% for project in site.data.projects %}
           <article class="project-card" itemscope itemtype="http://schema.org/CreativeWork">
             <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
             <div class="project-card-header">
-              <span class="project-index">0{{ forloop.index }}</span>
+              <span class="project-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
               <span class="project-role">{{ project.role }}</span>
             </div>
             <div class="project-card-body">
@@ -197,30 +195,6 @@
               {% endif %}
             </div>
           </article>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-        <div class="project-list">
-          {% for project in site.data.projects %}
-          {% unless project.featured %}
-          <article class="project-row" itemscope itemtype="http://schema.org/CreativeWork">
-            <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-            <span class="project-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
-            <div class="project-row-main">
-              <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-              <p class="resume-item-copy">{{ project.description }}</p>
-              {% if project.tags %}
-              <ul class="project-tags" aria-label="{{ project.project }} tags">
-                {% for tag in project.tags %}
-                <li>{{ tag }}</li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </div>
-            <p class="project-meta">{{ project.role }} &bull; {{ project.duration }}</p>
-          </article>
-          {% endunless %}
           {% endfor %}
         </div>
 
