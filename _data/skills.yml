@@ -1,22 +1,28 @@
 # Skills
 
-- skill: Domain Knowledge
-  description: Banking, Payment Gateway, Developer Experience, Automation, Data structure & algorithm
+- skill: Applied AI & Automation Platforms
+  description: GenAI adoption, LLM gateways, RAG systems, MCP, agent workflows, workflow automation, n8n, AI spend governance
 
-- skill: Programming Languages & Scripting
-  description: Go, Python, Javascript (Node.js), Typescript, C++, Java, Bash
+- skill: Backend Engineering
+  description: Go, Python, JavaScript (Node.js), TypeScript, Java, C++, API design, microservices, distributed systems
 
-- skill: Database
-  description: PostgreSQL, MySQL, Redis, MongoDB
+- skill: Developer Experience & Engineering Productivity
+  description: CI/CD standards, golden images, developer tooling, API lifecycle standardization, code review automation, internal platforms
+
+- skill: Banking & Payments
+  description: Digital banking, Open Banking, BI SNAP APIs, payment gateways, compliance-aware engineering, reliability in regulated environments
+
+- skill: Open Source & Developer Tools
+  description: OSS maintainership, MCP servers, agent runtime skills, Open WebUI plugins, Codex/Claude Code tooling, GitHub Actions
+
+- skill: Databases & Messaging
+  description: PostgreSQL, MySQL, Redis, MongoDB, Kafka, AWS SQS, RabbitMQ, NATS
 
 - skill: Cloud Platform
   description: AWS, GCP
-
-- skill: Messaging Systems
-  description: Kafka, AWS SQS, RabbitMQ, NATS
 
 - skill: Containerization & Infrastructure as Code
   description: Docker, Kubernetes, Terraform
 
 - skill: Monitoring & Observability
-  description: Open Telemetry, Grafana, Prometheus, Datadog, Splunk
+  description: OpenTelemetry, Grafana, Prometheus, Datadog, Splunk

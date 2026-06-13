@@ -18,13 +18,13 @@
       <ul class="toc-list" id="toc-list">
         {% if site.resume_section_experience %}<li><a href="#experience" data-section="experience">Experience</a></li>{% endif %}
         {% if site.resume_section_education %}<li><a href="#education" data-section="education">Education</a></li>{% endif %}
-        {% if site.resume_section_projects %}<li><a href="#projects" data-section="projects">Projects</a></li>{% endif %}
-        {% if site.resume_section_publications %}<li><a href="#publications" data-section="publications">Publications</a></li>{% endif %}
         {% if site.resume_section_skills %}<li><a href="#skills" data-section="skills">Skills</a></li>{% endif %}
-        {% if site.resume_section_recognition %}<li><a href="#recognition" data-section="recognition">Recognition</a></li>{% endif %}
+        {% if site.resume_section_projects %}<li><a href="#projects" data-section="projects">Open Source &amp; Projects</a></li>{% endif %}
         {% if site.resume_section_certifications %}<li><a href="#certifications" data-section="certifications">Certifications</a></li>{% endif %}
-        {% if site.resume_section_associations %}<li><a href="#associations" data-section="associations">Associations</a></li>{% endif %}
+        {% if site.resume_section_recognition %}<li><a href="#recognition" data-section="recognition">Recognition</a></li>{% endif %}
+        {% if site.resume_section_publications %}<li><a href="#publications" data-section="publications">Publications</a></li>{% endif %}
         {% if site.resume_section_links %}<li><a href="#links" data-section="links">Links</a></li>{% endif %}
+        {% if site.resume_section_associations %}<li><a href="#associations" data-section="associations">Associations</a></li>{% endif %}
       </ul>
     </nav>
 
@@ -62,11 +62,31 @@
           {{ site.resume_header_intro }}
         </div>
 
-        {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email">Contact me</a>
-        {% elsif site.resume_looking_for_work == 'no' %}
-        <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
-        {% else %}
+        {% if site.resume_strengths or site.resume_looking_for_work %}
+        <div class="header-action-panel no-print">
+          {% if site.resume_strengths %}
+          <div class="focus-strip">
+            <p class="action-panel-label">Focus</p>
+            <ul class="strengths-list" aria-label="Core strengths">
+              {% for strength in site.resume_strengths %}
+              <li>{{ strength }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          {% if site.resume_looking_for_work == 'yes' %}
+          <div class="contact-panel">
+            <p class="action-panel-label">Contact</p>
+            <a href="mailto:{{ site.resume_contact_email }}" class="contact-button" itemprop="email">Contact me</a>
+          </div>
+          {% elsif site.resume_looking_for_work == 'no' %}
+          <div class="contact-panel">
+            <p class="action-panel-label">Status</p>
+            <a class="contact-button not-looking">I'm not looking for work right now.</a>
+          </div>
+          {% endif %}
+        </div>
         {% endif %}
 
       </header>
@@ -85,7 +105,7 @@
           {% if job.summary %}
           <p class="resume-item-copy">{{ job.summary }}</p>
           {% endif %}
-          
+
           {% for position in job.positions %}
           <div class="resume-position">
             <h4 class="resume-item-details" itemprop="description">{{ position.role }} &bull; {{ position.duration }}</h4>
@@ -128,29 +148,101 @@
       {% endif %}
 
 
+      {% if site.resume_section_skills %}
+      <!-- begin Skills -->
+      <section class="content-section" id="skills">
+        <header class="section-header">
+          <h2>Skills</h2>
+        </header>
+
+        <div class="skills-list">
+          {% for skill in site.data.skills %}
+          <div class="skill-category">
+            <h3 class="skill-heading">{{ skill.skill }}</h3>
+            <p class="skill-technologies">{{ skill.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      <!-- end Skills -->
+      {% endif %}
+
       {% if site.resume_section_projects %}
       <!-- begin Projects -->
       <section class="content-section" id="projects">
         <header class="section-header">
-          <h2>Projects</h2>
+          <h2>Open Source &amp; Projects</h2>
         </header>
 
-        {% for project in site.data.projects %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-          <p class="resume-item-copy">{{ project.description }}</p>
+        {% assign featured_projects = site.data.projects | where: "featured", true %}
+        {% if featured_projects.size > 0 %}
+        <div class="featured-projects">
+          {% for project in featured_projects %}
+          <article class="project-card" itemscope itemtype="http://schema.org/CreativeWork">
+            <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+            <div class="project-card-header">
+              <span class="project-index">0{{ forloop.index }}</span>
+              <span class="project-role">{{ project.role }}</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
+              <p class="project-meta">{{ project.duration }}</p>
+              <p class="resume-item-copy">{{ project.description }}</p>
+              {% if project.tags %}
+              <ul class="project-tags" aria-label="{{ project.project }} tags">
+                {% for tag in project.tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </article>
+          {% endfor %}
         </div>
-        {% endfor %}
+        {% endif %}
+
+        <div class="project-list">
+          {% for project in site.data.projects %}
+          {% unless project.featured %}
+          <article class="project-row" itemscope itemtype="http://schema.org/CreativeWork">
+            <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+            <span class="project-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+            <div class="project-row-main">
+              <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
+              <p class="resume-item-copy">{{ project.description }}</p>
+              {% if project.tags %}
+              <ul class="project-tags" aria-label="{{ project.project }} tags">
+                {% for tag in project.tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+            <p class="project-meta">{{ project.role }} &bull; {{ project.duration }}</p>
+          </article>
+          {% endunless %}
+          {% endfor %}
+        </div>
 
       </section>
       <!-- end Projects -->
       {% endif %}
 
+      {% if site.resume_section_certifications %}
+      <!-- begin Certifications -->
+      {% include certifications.html %}
+      <!-- end Certifications -->
+      {% endif %}
+
+      {% if site.resume_section_recognition %}
+      <!-- begin Recognition -->
+      {% include recognition.html %}
+      <!-- end Recognition -->
+      {% endif %}
+
       {% if site.resume_section_publications %}
       <!-- begin Publications -->
-      <section class="content-section" id="publications">
+      <section class="content-section compact-section" id="publications">
 
         <header class="section-header">
           <h2>Publications</h2>
@@ -166,58 +258,6 @@
 
       </section>
       <!-- end Publications -->
-      {% endif %}
-
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section" id="skills">
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-        
-        <div class="skills-list">
-          {% for skill in site.data.skills %}
-          <div class="skill-category">
-            <h3 class="skill-heading">{{ skill.skill }}</h3>
-            <p class="skill-technologies">{{ skill.description }}</p>
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-      <!-- end Skills -->
-      {% endif %}
-
-
-      {% if site.resume_section_recognition %}
-      <!-- begin Recognition -->
-      {% include recognition.html %}
-      <!-- end Recognition -->
-      {% endif %}
-
-      {% if site.resume_section_certifications %}
-      <!-- begin Certifications -->
-      {% include certifications.html %}
-      <!-- end Certifications -->
-      {% endif %}
-
-      {% if site.resume_section_associations %}
-      <!-- begin Associations -->
-      <section class="content-section" id="associations">
-
-        <header class="section-header">
-          <h2>Associations</h2>
-        </header>
-
-        {% for association in site.data.associations %}
-        <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ association.role }} &bull; {{ association.year }}</h4>
-          <p class="resume-item-copy">{{ association.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Associations -->
       {% endif %}
 
       {% if site.resume_section_interests %}
@@ -242,7 +282,7 @@
 
       {% if site.resume_section_links %}
       <!-- begin Links -->
-      <section class="content-section" id="links">
+      <section class="content-section compact-section" id="links">
 
         <header class="section-header">
           <h2>Additional Links</h2>
@@ -258,6 +298,26 @@
 
       </section>
       <!-- end Links -->
+      {% endif %}
+
+      {% if site.resume_section_associations %}
+      <!-- begin Associations -->
+      <section class="content-section compact-section" id="associations">
+
+        <header class="section-header">
+          <h2>Associations</h2>
+        </header>
+
+        {% for association in site.data.associations %}
+        <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">{% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}</h3>
+          <h4 class="resume-item-details" itemprop="description">{{ association.role }} &bull; {{ association.year }}</h4>
+          <p class="resume-item-copy">{{ association.summary }}</p>
+        </div>
+        {% endfor %}
+
+      </section>
+      <!-- end Associations -->
       {% endif %}
 
       {% if site.resume_print_social_links %}
@@ -279,7 +339,7 @@
       <footer class="page-footer">
         <p class="footer-line">&copy; 2024. Forked from <a href="https://github.com/jglovier/resume-template">resume-template</a> by Joel Glovier, extensively modified.</p>
         {% if site.resume_show_last_updated %}
-        <p class="last-updated">Last updated: {{ site.resume_last_updated_date }}</p>
+        <p class="last-updated">Live resume, last updated: {{ site.resume_last_updated_date }}</p>
         {% endif %}
       </footer>
 
