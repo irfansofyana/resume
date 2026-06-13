@@ -1,22 +1,31 @@
-- company: PT Super Bank Indonesia
-  summary: Superbank is a digital bank in Indonesia backed by companies like Emtek, Grab, Singtel, and Kakaobank.
+- company: PT Super Bank Indonesia Tbk (Superbank)
+  summary: Superbank is an Indonesian digital bank backed by Emtek, Grab, Singtel, and KakaoBank.
   positions:
-    - role: Software Engineer, Backend (DevEx) - Manager
-      duration: June 2024 — Present
+    - role: AVP - Applied AI Engineer
+      duration: April 2026 — Present
+      summary: |
+        Leading AI and automation platform initiatives at Superbank, balancing deep hands-on engineering with leadership across adoption, enablement, governance, and operational execution.
+        <p> Key achievements and responsibilities: </p>
+        <ul>
+          <li>Lead applied AI and automation platform initiatives that help teams adopt AI safely, reduce repetitive work, and improve operational efficiency across the organization.</li>
+          <li>Helped grow adoption of Superbank's internal AI tooling by approximately 3x from 2025 to 2026-to-date through engineering sharing sessions, department roadshows, and practical enablement for safe and effective GenAI usage.</li>
+          <li>Own AI platform governance foundations, including usage visibility, budget controls, and spend tracking to support responsible scaling of AI tools.</li>
+          <li>Established the n8n automation platform foundation for internal workflow automation, enabling teams to prototype and operationalize repeatable processes without adding bespoke service complexity.</li>
+          <li>Authored and initiated SuperSkills, a collection of agent skills tailored to Superbank use cases that package repeatable AI workflows into reusable internal capabilities.</li>
+          <li>Continue shaping internal platform capabilities across SuperGPT, LLM gateway, SuperMCP, SuperSkills, RAG platform capabilities, and related tooling.</li>
+        </ul>
+    - role: Manager - Software Engineer (DevEx)
+      duration: June 2024 — March 2026
       summary: |
         Driving engineering excellence and productivity initiatives at Superbank through innovative developer tooling and streamlined processes. Empowering backend engineering teams to deliver high-quality software efficiently while maintaining exceptional developer experience.
         <p> Key achievements and responsibilities: </p>
         <ul>
-          <li>Optimized CI/CD pipelines for Golang services using Athens Go Proxy, achieving an xx% reduction in duration time for build, unit tests and code quality jobs</li>
-          <li>Leading GitLab migration initiative for the backend engineering team—one of Superbank's top strategic priorities for 2025</li>
-          <li>Standardized CI/CD pipelines across all teams, significantly reducing complexity and maintenance overhead</li>
-          <li>Developed and maintained golden images as foundational base for backend services</li>
-          <li>Spearheaded comprehensive API development lifecycle standardization initiative covering design, documentation, mocking, and testing using modern tools including Apidog, OpenAPI, and Swagger to ensure consistent practices, accelerate development velocity, reduce integration time, and enhance cross-team collaboration</li>
-          <li>Implemented automated backend unit test reporting system, improving governance and code quality standards</li>
-          <li>Integrated AI-powered code review tools into GitLab CI pipeline, enhancing review quality while reducing manual effort</li>
-          <li>Developed intelligent Slack bot with RAG capabilities for FAQ automation, enabling faster employee support and reducing response times</li>
-          <li>Developed internal URL shortener service to streamline internal resource sharing and improve accessibility</li>
-          <li>Conducted proof-of-concept implementation for distributed tracing using OpenTelemetry, enhancing system observability capabilities</li>
+          <li>Spearheaded one of Superbank's top 2025 backend engineering initiatives: migrating backend projects to GitLab to standardize delivery workflows and improve engineering governance across teams.</li>
+          <li>Standardized the end-to-end API lifecycle with Apidog, improving consistency across API design, documentation, mocking, testing, and cross-team collaboration.</li>
+          <li>Owned backend CI/CD standards across teams, including production base Docker images and shared pipeline conventions for reliability, security, and maintainability.</li>
+          <li>Reduced Go microservice CI feedback loops by optimizing workflows and introducing Athens Go Proxy across backend services.</li>
+          <li>Acted as AI Platform Architect &amp; Engineer for Superbank's internal AI platform, contributing to SuperGPT, an LLM API gateway, agent skills, SuperMCP, RAG platform capabilities, and related AI platform tooling.</li>
+          <li>Drove company-wide GenAI awareness through regular sharing sessions, helping engineers and non-engineering teams understand practical use cases, safe adoption patterns, and emerging AI engineering practices.</li>
         </ul>
 - company: Xendit
   summary: Xendit is a leading fintech company providing comprehensive payment infrastructure across Southeast Asia.
@@ -42,9 +51,9 @@
           <li>Ensured Xendit's compliance with Bank Indonesia's SNAP API standards by architecting and developing SNAP Payment API solutions (QRIS, Virtual Account, Ewallet, Direct Debit), enabling seamless merchant integration with standardized interface. Related work: <a href="https://developers.xendit.co/api-reference/#bi-snap" target="_blank" rel="noopener noreferrer">https://developers.xendit.co/api-reference/#bi-snap</a></li>
           <li>Successfully managed multicultural team of 7 contractors (5 Ukraine-based, 2 Indonesia-based) to deliver comprehensive internal HR department automation solutions:</li>
           <ul>
-            <li>Engineered performance review automation system including cost calculations and automated document generation, reducing HR manual workload by xx%</li>
+            <li>Engineered performance review automation system including cost calculations and automated document generation, reducing recurring HR manual workload</li>
             <li>Developed automated account provisioning/de-provisioning workflows for trial candidates (Google Workspace, Slack), streamlining Talent Acquisition operations</li>
-            <li>Developed automated account provisioning system eliminating manual HR work for new joiner setup across multiple platforms (Google Workspace, Slack, Atlassian, LastPass, BambooHR), reducing manual operations by xx% while significantly improving employee onboarding experience and enabling day-one productivity</li>
+            <li>Developed automated account provisioning system eliminating manual HR work for new joiner setup across multiple platforms (Google Workspace, Slack, Atlassian, LastPass, BambooHR), reducing manual operations while significantly improving employee onboarding experience and enabling day-one productivity</li>
           </ul>
           <li>Served as Acting Lead for Engineering Operations team:</li>
           <ul>
@@ -82,4 +91,3 @@
         Delivered specialized training in competitive programming and computer science olympiad preparation across prestigious institutions including ALC Indonesia, PelatihanOSN.com, Cyberfi Institute, LOPI, West Java Province, and the OSN Training Center.
         Mentored students to achieve exceptional results in national-level competitions, consistently producing medal winners.
         <p> Notable student achievements in National Olympiad in Informatics (OSN Informatika) 2017-2020: 3 Gold medals, 1 Silver medal, and 5 Bronze medals. </p>
-

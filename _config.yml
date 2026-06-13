@@ -1,17 +1,21 @@
 # Site settings
-title: "Irfan's Resume"
-description: "Irfan's Resume"
+title: "Irfan Sofyana Putra - AVP Applied AI Engineer"
+description: "Live resume for Irfan Sofyana Putra, AVP - Applied AI Engineer at Superbank focused on applied AI platforms, backend engineering, developer experience, infrastructure, open source, and automation."
+url: "https://resume.irfansp.dev"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
+exclude:
+  - AGENTS.md
 
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Irfan Sofyana Putra"
-resume_title:                   "Software Engineer"
+resume_title:                   "AVP - Applied AI Engineer @ Superbank"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "mail@irfansp.dev"
@@ -20,10 +24,18 @@ resume_contact_email:           "mail@irfansp.dev"
 resume_contact_telephone:       "-"
 resume_contact_address:         "Indonesia"
 
-resume_header_contact_info:     "Jakarta, Indonesia • mail@irfansp.dev"
-display_header_contact_info:    "false"
+resume_header_contact_info:     "South Jakarta, Indonesia • mail@irfansp.dev • linkedin.com/in/irfansofyana"
+display_header_contact_info:    "true"
 
-resume_header_intro: "<p>Irfan Sofyana Putra is a Senior Software Engineer specializing in backend development, infrastructure, and AI-driven solutions. He brings a proven track record of delivering scalable, high-performance systems in mission-critical payment and banking environments, backed by his B.Sc. in Informatics from Institut Teknologi Bandung (ITB).</p><p>Irfan combines deep technical expertise with strong business acumen to solve complex problems and enhance developer experience. Known for self-directed leadership, rapid adaptation to emerging technologies, and a customer-focused approach, he consistently drives projects from concept to successful deployment across diverse domains.</p>"
+resume_header_intro: "<p>I build applied AI platforms, backend engineering, developer experience tooling, and infrastructure for Fintech and Banking Companies. Currently, I lead AI and automation platform initiatives at Superbank, helping teams adopt AI safely, automate repeatable workflows, and improve operational execution.</p><p>Before Superbank, I spent four years at Xendit, growing from intern to Senior Software Engineer while building Open Banking APIs, payment infrastructure, and internal automation systems. Outside my day-to-day work, I stay active in open source through developer tooling, AI/LLM infrastructure, and productivity-focused projects. I am open to conversations around applied AI, backend engineering, developer experience, infrastructure, and engineering productivity roles.</p>"
+
+resume_strengths:
+  - Applied AI
+  - Backend Engineering
+  - Developer Experience
+  - Infrastructure
+  - Open Source
+  - Banking & Payments
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -33,7 +45,7 @@ resume_looking_for_work:        "yes"
 
 # Last updated timestamp control
 resume_show_last_updated:        true
-resume_last_updated_date:        "December 24, 2025"
+resume_last_updated_date:        "June 13, 2026"
 
 # Decide which sections to use
 # comment out to hide
@@ -44,7 +56,7 @@ resume_section_skills:          true
 resume_section_recognition:     true
 resume_section_certifications:   true
 resume_section_links:           true
-resume_section_associations:    true
+resume_section_associations:    false
 resume_section_publications:    true
 # resume_section_interests:       true
 
@@ -54,9 +66,9 @@ resume_social_links:
   resume_github_url:            "https://github.com/irfansofyana"
 #  resume_twitter_url:           "http://twitter.com/jglovier"
 #  resume_dribbble_url:          "https://dribbble.com/jag"
-  resume_facebook_url:          "https://www.facebook.com/irfan.sofyanaputra/"
+#  resume_facebook_url:          "https://www.facebook.com/irfan.sofyanaputra/"
   resume_linkedin_url:          "https://www.linkedin.com/in/irfansofyana/"
-  resume_instagram_url:         "https://www.instagram.com/irfansofyana/"
+#  resume_instagram_url:         "https://www.instagram.com/irfansofyana/"
   resume_website_url:           "https://irfansp.dev"
   # resume_medium_url:            "https://medium.com/@irfansofyana"
 resume_print_social_links:      true

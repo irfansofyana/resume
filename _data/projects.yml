@@ -1,68 +1,134 @@
-# Projects
-# uncomment the urls if you wish to display them, and add your own URL
+# Open Source & Projects
 
-- project: litellm
-  role: Contributor
-  duration: Dec 2025 — Dec 2025
-  url: https://github.com/BerriAI/litellm
-  description: An open-source library that provides a unified interface to 100+ LLMs. Contributed to PR#17467 (<a href="https://github.com/BerriAI/litellm/pull/17467" target="_blank" rel="noopener noreferrer">https://github.com/BerriAI/litellm/pull/17467</a>) fixing a bug in AWS Bedrock integration where non-Anthropic models (Qwen, Llama, Nova) would fail with "unknown variant anthropic_beta" error. The fix ensures beta headers are only applied to Anthropic models.
-
-- project: yaccs
+- project: ai-marketplace
   role: Maintainer
-  duration: Dec 2025 — Dec 2025
-  url: https://github.com/irfansofyana/yaccs
-  description: A CLI tool that eliminates the hassle of managing multiple LLM providers for Claude Code. Seamlessly switch between providers (OpenRouter, GLM, Chutes, etc.) with a single command, improving developer experience by removing the need to manually juggle environment variables or configuration files.
+  duration: June 2026 — Present
+  url: https://github.com/irfansofyana/ai-marketplace
+  featured: true
+  tags:
+    - Agent Workflows
+    - Agent Skills
+    - MCP
+    - Open Source
+  description: >
+    A skill-first marketplace for reusable agent workflows, plugins, and MCP infrastructure across multiple agent runtimes, with Codex-ready installation through npx skills.
 
-- project: devcontainer-features
-  role: Contributor
-  duration: Jan 2025 — Jan 2025
-  url: https://github.com/irfansofyana/devcontainer-features
-  description: A collection of custom Dev Container Features for reproducible development environments. Created two features officially documented at containers.dev (<a href="https://containers.dev/features" target="_blank" rel="noopener noreferrer">https://containers.dev/features</a>)&#58; kcat (Kafka command-line tool for Debian/Ubuntu containers) and lazydocker (terminal-based interface for Docker management). Built to streamline development setup and boost productivity.
+- project: pi-9router-ext
+  role: Maintainer
+  duration: June 2026 — Present
+  url: https://github.com/irfansofyana/pi-9router-ext
+  featured: true
+  tags:
+    - Applied AI
+    - Agent Tools
+    - TypeScript
+    - Open Source
+  description: >
+    A Pi Coding Agent extension for 9router that adds dynamic model discovery, provider registration, web search/fetch tools, reasoning controls, and persistent configuration.
+
+- project: open-webui-plugins
+  role: Maintainer
+  duration: June 2026 — Present
+  url: https://github.com/irfansofyana/open-webui-plugins
+  featured: true
+  tags:
+    - Open WebUI
+    - AI Tools
+    - Python
+    - Open Source
+  description: >
+    A curated collection of Open WebUI plugins and skills, including filters and markdown instruction sets that extend AI chat workflows in Open WebUI.
 
 - project: linkwarden-mcp-server
   role: Maintainer
   duration: Oct 2025 — Oct 2025
   url: https://github.com/irfansofyana/linkwarden-mcp-server
-  description: A Model Context Protocol (MCP) server that provides AI assistants with programmatic access to Linkwarden instances, a self-hosted bookmark management system. Features include managing collections, links, tags, full-text search, flexible tool selection, read-only mode for production, and Docker support. Built in Go with MCP client compatibility.
+  featured: true
+  tags:
+    - MCP
+    - Go
+    - AI Tools
+    - Open Source
+  description: >
+    A Model Context Protocol server that gives AI assistants programmatic access to Linkwarden collections, links, tags, search, and read-only production workflows.
 
-- project: pr-agent
-  role: Contributor
-  duration: May 2025 — May 2025
-  url: https://github.com/qodo-ai/pr-agent
-  description: PR agent is an AI-Powered tool for Automated Pull Request Analysis, Feedback, Suggestions and More. Contributed to PR#1744 (<a href="https://github.com/qodo-ai/pr-agent/pull/1744" target="_blank" rel="noopener noreferrer">https://github.com/qodo-ai/pr-agent/pull/1744</a>) to support models from OpenRouter provider.
-
-- project: devtools
+- project: yaccs
   role: Maintainer
-  duration: April 2025 — Present
-  url: https://github.com/irfansofyana/devtools
-  description: A comprehensive collection of web-based tools for developers. This project provides a toolkit that developers can access via GitHub Pages to perform common development tasks more efficiently. Can be accessed via <a href="https://devtools.irfansp.dev/" target="_blank" rel="noopener noreferrer">https://devtools.irfansp.dev/</a>
-
-- project: llm-youtube
-  role: Maintainer
-  duration: April 2025 — April 2025
-  url: https://github.com/irfansofyana/llm-youtube
-  description: A plugin to pull and get context from Youtube video for LLM CLI to use.
+  duration: Dec 2025 — Dec 2025
+  url: https://github.com/irfansofyana/yaccs
+  featured: true
+  tags:
+    - Claude Code
+    - LLM Providers
+    - Developer Experience
+    - Open Source
+  description: >
+    A CLI tool for switching Claude Code between LLM providers without manually juggling environment variables or config files.
 
 - project: Sheets-api
   role: Maintainer
   duration: Jan 2023 — Feb 2023
   url: https://github.com/irfansofyana/sheets-api
-  description: A Google AppScript library enabling users to easily and freely make their Google Sheets API-accessible. Inspired by tools like SheetDB or Sheetsu.
+  featured: true
+  tags:
+    - Google Apps Script
+    - API
+    - Developer Tools
+    - Open Source
+  description: >
+    A Google Apps Script library that makes Google Sheets accessible through a simple API, inspired by tools like SheetDB and Sheetsu.
 
-- project: Notify
+- project: litellm
   role: Contributor
-  duration: Oct 2022 — Oct 2022
-  url: https://github.com/nikoksr/notify
-  description: An open-source Go library designed to dispatch notifications across multiple messaging services. Contributed to PR#415 (<a href="https://github.com/nikoksr/notify/pull/415" target="_blank" rel="noopener noreferrer">https://github.com/nikoksr/notify/pull/415</a>) which added an integration to Viber platform.
+  duration: Dec 2025 — Dec 2025
+  url: https://github.com/BerriAI/litellm
+  tags:
+    - LLM Infrastructure
+    - AWS Bedrock
+    - Open Source
+  description: >
+    Contributed <a href="https://github.com/BerriAI/litellm/pull/17467" target="_blank" rel="noopener noreferrer">PR#17467</a> fixing AWS Bedrock integration behavior for non-Anthropic models such as Qwen, Llama, and Nova by applying beta headers only to Anthropic models.
 
-- project: Instapaper-actions
-  role: Maintainer
-  duration: Sept 2022 — Sept 2022
-  url: https://github.com/irfansofyana/instapaper-actions
-  description: A GitHub action template allowing users to seamlessly add web content to their Instapaper accounts. Built using JavaScript and GitHub actions.
+- project: pr-agent
+  role: Contributor
+  duration: May 2025 — May 2025
+  url: https://github.com/qodo-ai/pr-agent
+  tags:
+    - AI Code Review
+    - OpenRouter
+    - Open Source
+  description: >
+    Contributed <a href="https://github.com/qodo-ai/pr-agent/pull/1744" target="_blank" rel="noopener noreferrer">PR#1744</a> adding support for OpenRouter models to Qodo's AI-powered pull request analysis and suggestion tool.
 
-- project: MySpendingBot
+- project: devcontainer-features
+  role: Contributor
+  duration: Jan 2025 — Jan 2025
+  url: https://github.com/irfansofyana/devcontainer-features
+  tags:
+    - Dev Containers
+    - Developer Experience
+    - Open Source
+  description: >
+    Created custom Dev Container Features for kcat and lazydocker, helping make reproducible development environments easier to assemble and publish through the <a href="https://containers.dev/features" target="_blank" rel="noopener noreferrer">containers.dev features index</a>.
+
+- project: devtools
   role: Maintainer
-  duration: Aug 2022 — Sept 2022
-  url: https://github.com/irfansofyana/MySpendingBot
-  description: A personal Telegram bot for tracking user spending, featuring capabilities to create, update, delete, and report expenses. Engineered using Google App Scripts, Google Sheets, and the Telegram API.
+  duration: April 2025 — Present
+  url: https://github.com/irfansofyana/devtools
+  tags:
+    - Developer Tools
+    - Web
+    - Open Source
+  description: >
+    A collection of browser-based developer utilities published through GitHub Pages at <a href="https://devtools.irfansp.dev/" target="_blank" rel="noopener noreferrer">devtools.irfansp.dev</a>.
+
+- project: llm-youtube
+  role: Maintainer
+  duration: April 2025 — April 2025
+  url: https://github.com/irfansofyana/llm-youtube
+  tags:
+    - LLM Tools
+    - YouTube
+    - Open Source
+  description: >
+    A plugin for pulling YouTube video context into LLM CLI workflows.
