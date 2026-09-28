@@ -74,6 +74,11 @@ html[data-theme] .content-section .resume-item .resume-position .resume-item-det
 html[data-theme] .page-footer .footer-line > a { color: var(--ink); }
 html[data-theme] .project-index { color: var(--accent); }
 
+html[data-theme="dark"] .resume-contact-links a { color: var(--link); }
+html[data-theme="dark"] .section-navigation a { color: var(--muted); }
+html[data-theme="dark"] .resume-eyebrow { color: #ffd966; }
+html[data-theme="dark"] .page-header { border-color: rgba(54, 255, 122, .25); }
+
 @media print {
   html[data-theme="dark"] {
     --page: #fff;
