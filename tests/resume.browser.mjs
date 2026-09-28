@@ -32,26 +32,28 @@ test('experience prose uses a readable measure on desktop like the reference', a
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
     await page.goto(site);
     const width = await page.locator('#experience .resume-position .resume-item-copy').first().evaluate(el => el.getBoundingClientRect().width);
-    assert.ok(width <= 750, `experience prose is ${width}px wide`);
+    assert.ok(width >= 680 && width <= 750, `experience prose is ${width}px wide`);
   } finally { await browser.close(); }
 });
 
-test('desktop places the full profile beside experience instead of leaving a blank rail', async () => {
+test('desktop keeps one centered document column with Profile after Experience', async () => {
   const browser = await launch();
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
     await page.goto(site);
     const panels = await page.evaluate(() => {
+      const frame = document.querySelector('.terminal-window').getBoundingClientRect();
       const exp = document.querySelector('#experience').getBoundingClientRect();
       const profile = document.querySelector('#profile').getBoundingClientRect();
       const projects = document.querySelector('#projects').getBoundingClientRect();
-      return { expRight: exp.right, expTop: exp.top, profileLeft: profile.left, profileTop: profile.top,
-        profileWidth: profile.width, projectsTop: projects.top, expBottom: exp.bottom };
+      return { frameWidth: frame.width, expLeft: exp.left, expBottom: exp.bottom,
+        profileLeft: profile.left, profileTop: profile.top, profileBottom: profile.bottom,
+        projectsTop: projects.top, mainDisplay: getComputedStyle(document.querySelector('#main-content')).display };
     });
-    assert.ok(panels.profileLeft >= panels.expRight, JSON.stringify(panels));
-    assert.ok(Math.abs(panels.profileTop - panels.expTop) <= 25, JSON.stringify(panels));
-    assert.ok(panels.profileWidth >= 280, JSON.stringify(panels));
-    assert.ok(panels.projectsTop >= panels.expBottom, JSON.stringify(panels));
+    assert.ok(panels.frameWidth <= 960, JSON.stringify(panels));
+    assert.equal(panels.mainDisplay, 'block');
+    assert.ok(Math.abs(panels.profileLeft - panels.expLeft) < 2, JSON.stringify(panels));
+    assert.ok(panels.profileTop >= panels.expBottom && panels.projectsTop >= panels.profileBottom, JSON.stringify(panels));
   } finally { await browser.close(); }
 });
 
