@@ -30,6 +30,18 @@ test('all public résumé sections retain their anchors', () => {
   }
 });
 
+test('résumé borrows the live artifact-site shell without turning experience into a registry', () => {
+  assert.match(source, /class="wrapper terminal-window"/);
+  assert.match(source, /class="window-chrome"/);
+  assert.match(source, /class="window-path"/);
+  assert.match(source, /class="page-inner"/);
+  assert.match(source, /class="resume-utility page-toolbar"/);
+  assert.match(source, /class="header-name"[^>]*>\{\{ site\.resume_name \}\}<span class="cursor"/);
+  assert.match(source, /class="page-footer window-footer"/);
+  assert.match(source, /class="resume-position"/);
+  assert.doesNotMatch(source, /class="registry-list"/);
+});
+
 test('public résumé detail remains sourced from existing Jekyll data', () => {
   assert.match(source, /site\.data\.experience/);
   assert.match(source, /position\.summary/);

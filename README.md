@@ -1,6 +1,6 @@
 # Irfan Sofyana Putra — live résumé
 
-This repository builds the human-readable résumé at [resume.irfansp.dev](https://resume.irfansp.dev/) with Jekyll and GitHub Pages. Experience, projects, skills, education and other sections are sourced from `_data/`; the compact page layout is `_layouts/resume.html`. Light and Dark modes use Irfan's Dev Design System colors and persist a visitor's choice in their browser. Print always uses a light surface.
+This repository builds the human-readable résumé at [resume.irfansp.dev](https://resume.irfansp.dev/) with Jekyll and GitHub Pages. Experience, projects, skills, education and other sections are sourced from `_data/`; the compact page layout is `_layouts/resume.html`. The terminal frame, chrome, prompt labels, dashed rules, palette and local fonts are adapted from [Irfan's agent-artifacts site](https://irfansp.dev/agent-artifacts/) and Dev Design System; the résumé remains a naturally scrolling document rather than a registry or nested-scroll app. Light and Dark modes persist a visitor's choice in their browser. Print always uses a light surface.
 
 ## Local preview
 

@@ -1,0 +1,143 @@
+// Composition shared with the agent-artifacts site: terminal frame,
+// chrome, prompt labels and dashed rules. The résumé remains a normal
+// scrolling document rather than copying the registry's inner scroller.
+html[data-theme="dark"] {
+  --chrome: #1c1f1c;
+  --chrome-line: #2a2e2a;
+  --eyebrow: #ffd966;
+  --accent-soft: rgba(54, 255, 122, .25);
+  --panel: rgba(255, 255, 255, .03);
+}
+html[data-theme="light"] {
+  --chrome: #e2e0d6;
+  --chrome-line: #cfccbf;
+  --eyebrow: #846300;
+  --accent-soft: rgba(11, 122, 59, .22);
+  --panel: rgba(0, 0, 0, .03);
+}
+
+html[data-theme] .terminal-window.wrapper {
+  width: min(1100px, calc(100% - 32px));
+  max-width: none;
+  margin: 30px auto;
+  padding: 0;
+  border: 1px solid var(--accent-soft);
+  border-radius: 12px;
+  overflow: clip;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .18), 0 0 18px var(--accent-soft);
+}
+html[data-theme="light"] .terminal-window.wrapper {
+  box-shadow: 0 12px 32px rgba(40, 40, 20, .12);
+}
+.window-chrome {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 38px;
+  padding: 0 14px;
+  background: var(--chrome);
+  border-bottom: 1px solid var(--chrome-line);
+  color: var(--muted);
+  font: 11px "Irfan JetBrains Mono", $mono-font;
+}
+.traffic { display: flex; gap: 6px; }
+.traffic i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5f57;
+  &:nth-child(2) { background: #ffbd2e; }
+  &:nth-child(3) { background: #28ca42; }
+}
+.window-path { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.page-inner { padding: 0 clamp(20px, 4vw, 48px) 48px; }
+.page-toolbar {
+  padding: 20px 0 0;
+  border: 0;
+  font: 12px "Irfan JetBrains Mono", $mono-font;
+  a { text-decoration: none; }
+}
+html[data-theme] .page-toolbar a { color: var(--link); }
+html[data-theme] .page-toolbar .theme-toggle {
+  min-height: 40px;
+  border: 1px dashed var(--accent-soft);
+  border-radius: 3px;
+  background: var(--panel);
+  color: var(--accent);
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+html[data-theme] .page-toolbar .theme-toggle:hover { border-color: var(--accent); }
+html[data-theme] .page-header { border-bottom: 0; padding-bottom: 18px; }
+html[data-theme] .resume-eyebrow {
+  color: var(--eyebrow);
+  letter-spacing: .16em;
+  margin-top: 30px;
+}
+.page-header .header-name { overflow-wrap: anywhere; }
+html[data-theme] .cursor { color: var(--accent); }
+html[data-theme] .resume-contact-links a { color: var(--link); }
+html[data-theme] .section-navigation {
+  border-top: 1px dashed var(--accent-soft);
+  border-bottom: 1px solid var(--line);
+  margin: 0;
+}
+html[data-theme] .section-navigation a { color: var(--muted); }
+html[data-theme] .section-navigation a:hover { color: var(--link); }
+#experience .resume-item-copy { max-width: 72ch; }
+html[data-theme] .section-header {
+  padding-top: 15px;
+  border-top: 1px dashed var(--accent-soft);
+  border-bottom: 0;
+}
+html[data-theme] .section-header::after { display: none; }
+html[data-theme] .section-header h2 {
+  color: var(--accent);
+  font: 600 12px "Irfan JetBrains Mono", $mono-font;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  &::before { content: "▸ "; }
+}
+html[data-theme] .window-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  min-height: 32px;
+  padding: 6px 14px;
+  border-top: 1px solid var(--chrome-line);
+  background: var(--chrome);
+  font: 10px "Irfan JetBrains Mono", $mono-font;
+}
+html[data-theme] .window-footer .footer-line { margin: 0; color: var(--muted); }
+html[data-theme] .window-footer a { color: var(--link); }
+
+@media (max-width: 700px) {
+  html[data-theme] .terminal-window.wrapper {
+    width: calc(100% - 16px);
+    margin: 8px auto;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  .page-inner { padding: 0 16px 36px; }
+  .window-chrome { min-height: 32px; }
+  .page-toolbar { padding-top: 12px; }
+  html[data-theme] .resume-eyebrow { margin-top: 18px; }
+  html[data-theme] .section-navigation { margin-right: -16px; padding-right: 16px; }
+}
+@media print {
+  html[data-theme] .terminal-window.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+  .window-chrome, .page-toolbar, .window-footer, .cursor { display: none !important; }
+  .page-inner { padding: 0; }
+  html[data-theme] .section-header { border-top: 1px solid #cfccbf; }
+}

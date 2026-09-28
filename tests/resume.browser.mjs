@@ -7,6 +7,35 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const site = process.env.RESUME_URL || 'http://127.0.0.1:4175/';
 const launch = () => chromium.launch({ headless: true, executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
 
+test('artifact-inspired shell keeps natural mobile document scroll and experience in view', async () => {
+  const browser = await launch();
+  try {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    await page.goto(site, { waitUntil: 'networkidle' });
+    const view = await page.evaluate(() => ({
+      chrome: !!document.querySelector('.terminal-window > .window-chrome'),
+      toolbar: !!document.querySelector('.page-inner > .page-header .page-toolbar'),
+      pageScroll: document.documentElement.scrollHeight > innerHeight,
+      shellOverflow: document.querySelector('.terminal-window') ? getComputedStyle(document.querySelector('.terminal-window')).overflowY : 'missing',
+      firstRole: document.querySelector('#experience .resume-position').getBoundingClientRect().top,
+    }));
+    assert.ok(view.chrome && view.toolbar, JSON.stringify(view));
+    assert.ok(view.pageScroll, 'long résumé must use natural page scroll');
+    assert.notEqual(view.shellOverflow, 'auto', 'avoid a nested viewport-sized scroller');
+    assert.ok(view.firstRole < 844, `first role starts at ${view.firstRole}px`);
+  } finally { await browser.close(); }
+});
+
+test('experience prose uses a readable measure on desktop like the reference', async () => {
+  const browser = await launch();
+  try {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    await page.goto(site);
+    const width = await page.locator('#experience .resume-position .resume-item-copy').first().evaluate(el => el.getBoundingClientRect().width);
+    assert.ok(width <= 750, `experience prose is ${width}px wide`);
+  } finally { await browser.close(); }
+});
+
 for (const [width, height] of [[320, 700], [390, 844], [767, 900], [768, 1024], [769, 900], [1280, 800]]) {
   test(`résumé remains navigable without document overflow at ${width}×${height}`, async () => {
     const browser = await launch();

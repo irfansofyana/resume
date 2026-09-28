@@ -38,7 +38,7 @@ test('Dark uses design-system semantic colors and readable type roles', async ()
         contact: color('.resume-contact-links a'),
         nav: color('.section-navigation a'),
         eyebrow: color('.resume-eyebrow'),
-        rule: getComputedStyle(document.querySelector('.page-header')).borderBottomColor,
+        rule: getComputedStyle(document.querySelector('.section-navigation')).borderTopColor,
         bodyFont: getComputedStyle(document.body).fontFamily,
         headingFont: getComputedStyle(document.querySelector('.header-name')).fontFamily,
       };
@@ -46,7 +46,7 @@ test('Dark uses design-system semantic colors and readable type roles', async ()
     assert.equal(styles.contact, 'rgb(106, 215, 255)', 'Dark contact links should use design-system cyan');
     assert.equal(styles.nav, 'rgb(168, 184, 168)', 'repeated section links should use subdued readable text');
     assert.equal(styles.eyebrow, 'rgb(255, 217, 102)', 'eyebrow should use design-system gold');
-    assert.equal(styles.rule, 'rgba(54, 255, 122, 0.25)', 'large header rule should use restrained phosphor');
+    assert.equal(styles.rule, 'rgba(54, 255, 122, 0.25)', 'section divider should use restrained phosphor');
     assert.match(styles.bodyFont, /Fira Code/);
     assert.match(styles.headingFont, /JetBrains Mono/);
   } finally { await browser.close(); }
