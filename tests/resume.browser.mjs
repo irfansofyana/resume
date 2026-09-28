@@ -36,6 +36,40 @@ test('experience prose uses a readable measure on desktop like the reference', a
   } finally { await browser.close(); }
 });
 
+test('desktop places the full profile beside experience instead of leaving a blank rail', async () => {
+  const browser = await launch();
+  try {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    await page.goto(site);
+    const panels = await page.evaluate(() => {
+      const exp = document.querySelector('#experience').getBoundingClientRect();
+      const profile = document.querySelector('#profile').getBoundingClientRect();
+      const projects = document.querySelector('#projects').getBoundingClientRect();
+      return { expRight: exp.right, expTop: exp.top, profileLeft: profile.left, profileTop: profile.top,
+        profileWidth: profile.width, projectsTop: projects.top, expBottom: exp.bottom };
+    });
+    assert.ok(panels.profileLeft >= panels.expRight, JSON.stringify(panels));
+    assert.ok(Math.abs(panels.profileTop - panels.expTop) <= 25, JSON.stringify(panels));
+    assert.ok(panels.profileWidth >= 280, JSON.stringify(panels));
+    assert.ok(panels.projectsTop >= panels.expBottom, JSON.stringify(panels));
+  } finally { await browser.close(); }
+});
+
+test('full profile copy is visible after experience so mobile readers reach work first', async () => {
+  const browser = await launch();
+  try {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    await page.goto(site);
+    assert.ok(await page.locator('#profile').isVisible());
+    assert.equal(await page.locator('#profile p').count(), 2);
+    assert.equal(await page.locator('#profile p').first().textContent(), 'I build applied AI platforms, backend engineering, developer experience tooling, and infrastructure for Fintech and Banking Companies. Currently, I lead AI and automation platform initiatives at Superbank, helping teams adopt AI safely, automate repeatable workflows, and improve operational execution.');
+    assert.equal(await page.locator('#profile p').last().textContent(), 'Before Superbank, I spent four years at Xendit, growing from intern to Senior Software Engineer while building Open Banking APIs, payment infrastructure, and internal automation systems. Outside my day-to-day work, I stay active in open source through developer tooling, AI/LLM infrastructure, and productivity-focused projects. I am open to conversations around applied AI, backend engineering, developer experience, infrastructure, and engineering productivity roles.');
+    const order = await page.evaluate(() => ['experience','profile','projects'].map(id => document.getElementById(id).getBoundingClientRect().top));
+    assert.ok(order[0] < order[1] && order[1] < order[2], String(order));
+    assert.equal(await page.locator('.section-navigation a[href="#profile"]').count(), 1);
+  } finally { await browser.close(); }
+});
+
 for (const [width, height] of [[320, 700], [390, 844], [767, 900], [768, 1024], [769, 900], [1280, 800]]) {
   test(`résumé remains navigable without document overflow at ${width}×${height}`, async () => {
     const browser = await launch();
@@ -99,8 +133,13 @@ test('printing from Dark uses a light paper surface and dark text', async () => 
     const colors = await page.evaluate(() => ({
       page: getComputedStyle(document.querySelector('.wrapper')).backgroundColor,
       text: getComputedStyle(document.querySelector('.page-header .header-name')).color,
+      layout: getComputedStyle(document.querySelector('#main-content')).display,
+      experienceBottom: document.querySelector('#experience').getBoundingClientRect().bottom,
+      profileTop: document.querySelector('#profile').getBoundingClientRect().top,
     }));
     assert.equal(colors.page, 'rgb(255, 255, 255)');
     assert.equal(colors.text, 'rgb(20, 32, 20)');
+    assert.equal(colors.layout, 'block');
+    assert.ok(colors.profileTop >= colors.experienceBottom);
   } finally { await browser.close(); }
 });

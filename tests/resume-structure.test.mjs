@@ -4,6 +4,13 @@ import assert from 'node:assert/strict';
 
 const source = readFileSync(new URL('../_layouts/resume.html', import.meta.url), 'utf8');
 
+test('restores both original profile paragraphs without editorial shortening', () => {
+  const config = readFileSync(new URL('../_config.yml', import.meta.url), 'utf8');
+  assert.ok(config.includes('I build applied AI platforms, backend engineering, developer experience tooling, and infrastructure for Fintech and Banking Companies. Currently, I lead AI and automation platform initiatives at Superbank, helping teams adopt AI safely, automate repeatable workflows, and improve operational execution.'));
+  assert.ok(config.includes('Before Superbank, I spent four years at Xendit, growing from intern to Senior Software Engineer while building Open Banking APIs, payment infrastructure, and internal automation systems. Outside my day-to-day work, I stay active in open source through developer tooling, AI/LLM infrastructure, and productivity-focused projects. I am open to conversations around applied AI, backend engineering, developer experience, infrastructure, and engineering productivity roles.'));
+  assert.match(source, /class="executive-summary-detail"/);
+});
+
 test('header offers a named theme control', () => {
   assert.match(source, /id="theme-toggle"/);
 });

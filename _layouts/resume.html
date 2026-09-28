@@ -24,7 +24,6 @@
         <p class="resume-eyebrow">▸ Applied AI Engineer · South Jakarta</p>
         <h1 class="header-name" itemprop="name">{{ site.resume_name }}<span class="cursor" aria-hidden="true">_</span></h1>
         <p class="header-title" itemprop="jobTitle">{{ site.resume_title }}</p>
-        <p class="executive-summary" itemprop="description">{{ site.resume_header_intro | escape }}</p>
         <div class="resume-contact-links">
           <a href="mailto:{{ site.resume_contact_email }}" itemprop="email">{{ site.resume_contact_email }}</a>
           <a href="{{ site.resume_social_links.resume_linkedin_url }}">LinkedIn</a>
@@ -34,6 +33,7 @@
 
       <nav class="section-navigation no-print" aria-label="Résumé sections">
         {% if site.resume_section_experience %}<a href="#experience">Experience</a>{% endif %}
+        <a href="#profile">Profile</a>
         {% if site.resume_section_projects %}<a href="#projects">Projects</a>{% endif %}
         {% if site.resume_section_skills %}<a href="#skills">Skills</a>{% endif %}
         {% if site.resume_section_education %}<a href="#education">Education</a>{% endif %}
@@ -72,6 +72,11 @@
       <!-- end Experience -->
       {% endif %}
 
+      <section class="content-section compact-section" id="profile">
+        <header class="section-header"><h2>Profile</h2></header>
+        <p class="executive-summary" itemprop="description">{{ site.resume_header_intro | escape }}</p>
+        <p class="executive-summary-detail" itemprop="description">{{ site.resume_header_detail | escape }}</p>
+      </section>
 
       {% if site.resume_section_projects %}
       <!-- begin Projects -->

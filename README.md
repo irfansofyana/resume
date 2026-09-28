@@ -17,9 +17,9 @@ With a local Ruby/Bundler environment, `bundle install && bundle exec jekyll ser
 
 ## Editing the résumé
 
-- `_config.yml`: name, current title, concise introduction, contact, and section visibility.
+- `_config.yml`: name, current title, both verbatim profile paragraphs, contact, and section visibility. Profile sits beside Experience on wide desktops and follows it on smaller screens so work remains visible early.
 - `_data/experience.yml`, `_data/projects.yml`, `_data/skills.yml` and the other `_data/*.yml`: substantive career details. Keep dates, metrics, and claims accurate and reviewable.
-- `_layouts/resume.html`: semantic page structure. `_sass/_readable.scss` and `_sass/_theme.scss`: layout and palettes. `assets/js/theme.js`: the optional mode switch.
+- `_layouts/resume.html`: semantic page structure. `_sass/_readable.scss`, `_sass/_theme.scss`, and `_sass/_artifact-shell.scss`: layout, palettes, and the reference-site shell. `assets/js/theme.js`: the optional mode switch.
 - The current theme is Light on first visit; the visible button switches to Dark and back. Navigation and content work without JavaScript.
 
 Run source tests with `node --test tests/resume-structure.test.mjs`. Browser tests require Playwright and Chrome; install Playwright as a development dependency in your preferred environment, or point `PLAYWRIGHT_MODULE` to an existing Playwright installation:
