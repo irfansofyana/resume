@@ -8,10 +8,10 @@ Ruby/Bundler are not required on the host if Docker is available:
 
 ```bash
 bash scripts/build-local.sh
-python3 -m http.server 4175 --bind 127.0.0.1 --directory "$TMPDIR/resume-jekyll/site"
+python3 -m http.server 4175 --bind 127.0.0.1 --directory "${TMPDIR:-${XDG_CACHE_HOME:-$HOME/.cache}}/resume-jekyll/site"
 ```
 
-Open <http://127.0.0.1:4175/>. `build-local.sh` builds the pinned GitHub Pages gem image once, mounts this repository read-only, and writes the generated preview to the Hermes scratch directory. After editing the site, rerun the build command and refresh the page. The tracked `_site/` and `.sass-cache/` directories are legacy build output; **do not use them as proof that a new build passed**.
+Open <http://127.0.0.1:4175/>. `build-local.sh` builds the pinned GitHub Pages gem image once, mounts this repository read-only, and writes the generated preview to `TMPDIR` when set or the user cache directory otherwise. After editing the site, rerun the build command and refresh the page. The tracked `_site/` and `.sass-cache/` directories are legacy build output; **do not use them as proof that a new build passed**.
 
 With a local Ruby/Bundler environment, `bundle install && bundle exec jekyll serve` remains an option.
 

@@ -2,7 +2,8 @@
 set -euo pipefail
 
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-out="${TMPDIR:?TMPDIR must point to a scratch directory}/resume-jekyll"
+scratch="${TMPDIR:-${XDG_CACHE_HOME:-$HOME/.cache}}"
+out="$scratch/resume-jekyll"
 mkdir -p "$out/sass-cache"
 # Jekyll 3 does not remove excluded files from an existing destination.
 # Clear only this generated scratch site before rebuilding.
