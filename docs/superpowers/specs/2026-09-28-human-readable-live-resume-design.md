@@ -8,7 +8,7 @@ This change is **local for preview and review**. Do not push, publish, or change
 
 ## Reading hierarchy
 
-1. A quiet utility strip and accessible paper/dark theme control (no terminal-window chrome or decorative command prompt).
+1. A quiet utility strip and visible, labeled **Light / Dark** mode control (no terminal-window chrome or decorative command prompt). Both modes are first-class, not a CSS inversion.
 2. Name, current title and employer, and one short positioning statement grounded in the existing public résumé. Direct email, LinkedIn and GitHub links must be visible as text, not icons alone. The real portrait may remain in metadata but need not occupy the header.
 3. Small section navigation if useful; on narrow phones it scrolls within its own rail, not the document. Experience begins within a standard phone's first viewport, targeted at 390 × 844, without shrinking the name into illegibility.
 4. Experience in reverse chronological order with current role visible first. Existing roles, achievements, dates and citations remain available; improve hierarchy, spacing and bullet scanning rather than deleting material. Projects and skills should be accessible next, with education, certifications, recognition, publications and extra links afterward. Preserve anchor links when sections move.
@@ -16,9 +16,9 @@ This change is **local for preview and review**. Do not push, publish, or change
 
 ## Visual and implementation contract
 
-Use the supplied `Irfan Devs Design System.zip` as the palette/typographic source: restrained green accents, readable paper and dark surfaces, disciplined rules, and monospaced details. Prioritize contrast and normal reading size over strict imitation of a developer-terminal shell. Adapt the existing Sass/Jekyll layout in `_layouts/resume.html`, `_config.yml`, `_sass/`, `_includes/head.html` and existing navigation script as needed. Do not replace the generator or duplicate résumé data in a JavaScript object. Avoid a new runtime dependency. Keep metadata, schema.org identity, social links and canonical URL accurate.
+Use the supplied `Irfan Devs Design System.zip` as the palette/typographic source: restrained green accents, a warm paper-style **Light** mode and a purpose-built **Dark** mode, disciplined rules, and monospaced details. Both must maintain readable text, links, borders, focus states and active controls at the same hierarchy and content density. Prioritize contrast and normal reading size over strict imitation of a developer-terminal shell. Adapt the existing Sass/Jekyll layout in `_layouts/resume.html`, `_config.yml`, `_sass/`, `_includes/head.html` and existing navigation script as needed. Do not replace the generator or duplicate résumé data in a JavaScript object. Avoid a new runtime dependency. Keep metadata, schema.org identity, social links and canonical URL accurate.
 
-The layout must work without JavaScript except theme persistence/navigation enhancement. The theme control must be keyboard-operable with a visible label and appropriate pressed state; honor the chosen theme on reload, default to a legible paper scheme, and force paper in print. Use semantic header/nav/main/section hierarchy, a skip link and focus-visible styles. Avoid stale “last updated” claims: only show a date tied to an actual content review, not simply a CSS release.
+The page content and navigation must work without JavaScript; switching modes is the enhancement. Show a keyboard-operable, visibly labeled Light / Dark button with its current state announced accessibly. Default to Light, persist a manual choice across reloads in local storage, apply the saved choice before the page paints to avoid a flash of the wrong mode, and fall back to Light if storage is unavailable. Use a Light print stylesheet regardless of the screen choice. Use semantic header/nav/main/section hierarchy, a skip link and focus-visible styles. Avoid stale “last updated” claims: only show a date tied to an actual content review, not simply a CSS release.
 
 ## Public-content boundary
 
@@ -27,6 +27,6 @@ Employer names and personal contact details already intentionally public on the 
 ## Verification and acceptance
 
 - Add failing regression tests for header order and absence of overloaded old elements, anchor links, accessible contact/theme controls, and unchanged source-backed role details before production edits.
-- Build the real Jekyll site locally and inspect generated HTML, not just a throwaway sketch. Verify phone widths 320 and 390, short phone, tablet and desktop; examine the first viewport, print, paper and dark, horizontal overflow, keyboard access, section links, and browser console. Capture local desktop and phone screenshots and give them to Irfan for review.
+- Build the real Jekyll site locally and inspect generated HTML, not just a throwaway sketch. Verify phone widths 320 and 390, short phone, tablet and desktop; examine the first viewport, horizontal overflow, keyboard access, section links, and browser console in **both Light and Dark**. Toggle each way, reload, verify persisted choice and no wrong-mode flash; disable storage and JavaScript to check safe fallback; check print rendering from Dark. Capture local desktop and phone screenshots of both modes and give them to Irfan for review.
 - Run the repo's available tests plus build/validation and `git diff --check`. Investigate a supported local Jekyll runtime because Ruby/Bundler are not currently installed on this host; do not claim a build succeeded until it has run.
 - Keep the change local until Irfan approves the actual implementation. A design-sketch screenshot is not evidence that production Jekyll renders correctly.
