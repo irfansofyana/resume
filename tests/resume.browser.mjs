@@ -7,7 +7,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const site = process.env.RESUME_URL || 'http://127.0.0.1:4175/';
 const launch = () => chromium.launch({ headless: true, executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
 
-test('artifact-inspired shell keeps natural mobile document scroll and experience in view', async () => {
+test('artifact-inspired shell keeps natural mobile scroll with Profile visible first', async () => {
   const browser = await launch();
   try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
@@ -17,12 +17,12 @@ test('artifact-inspired shell keeps natural mobile document scroll and experienc
       toolbar: !!document.querySelector('.page-inner > .page-header .page-toolbar'),
       pageScroll: document.documentElement.scrollHeight > innerHeight,
       shellOverflow: document.querySelector('.terminal-window') ? getComputedStyle(document.querySelector('.terminal-window')).overflowY : 'missing',
-      firstRole: document.querySelector('#experience .resume-position').getBoundingClientRect().top,
+      profileTop: document.querySelector('#profile').getBoundingClientRect().top,
     }));
     assert.ok(view.chrome && view.toolbar, JSON.stringify(view));
     assert.ok(view.pageScroll, 'long résumé must use natural page scroll');
     assert.notEqual(view.shellOverflow, 'auto', 'avoid a nested viewport-sized scroller');
-    assert.ok(view.firstRole < 844, `first role starts at ${view.firstRole}px`);
+    assert.ok(view.profileTop < 844, `Profile starts at ${view.profileTop}px`);
   } finally { await browser.close(); }
 });
 
@@ -36,7 +36,7 @@ test('experience prose uses a readable measure on desktop like the reference', a
   } finally { await browser.close(); }
 });
 
-test('desktop keeps one centered document column with Profile after Experience', async () => {
+test('desktop keeps one centered document column with Profile before Experience', async () => {
   const browser = await launch();
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
@@ -46,18 +46,19 @@ test('desktop keeps one centered document column with Profile after Experience',
       const exp = document.querySelector('#experience').getBoundingClientRect();
       const profile = document.querySelector('#profile').getBoundingClientRect();
       const projects = document.querySelector('#projects').getBoundingClientRect();
-      return { frameWidth: frame.width, expLeft: exp.left, expBottom: exp.bottom,
-        profileLeft: profile.left, profileTop: profile.top, profileBottom: profile.bottom,
-        projectsTop: projects.top, mainDisplay: getComputedStyle(document.querySelector('#main-content')).display };
+      return { frameWidth: frame.width, expLeft: exp.left, expTop: exp.top,
+        profileLeft: profile.left, profileBottom: profile.bottom,
+        projectsTop: projects.top, expBottom: exp.bottom,
+        mainDisplay: getComputedStyle(document.querySelector('#main-content')).display };
     });
     assert.ok(panels.frameWidth <= 960, JSON.stringify(panels));
     assert.equal(panels.mainDisplay, 'block');
     assert.ok(Math.abs(panels.profileLeft - panels.expLeft) < 2, JSON.stringify(panels));
-    assert.ok(panels.profileTop >= panels.expBottom && panels.projectsTop >= panels.profileBottom, JSON.stringify(panels));
+    assert.ok(panels.expTop >= panels.profileBottom && panels.projectsTop >= panels.expBottom, JSON.stringify(panels));
   } finally { await browser.close(); }
 });
 
-test('full profile copy is visible after experience so mobile readers reach work first', async () => {
+test('full profile copy is visible before experience on mobile', async () => {
   const browser = await launch();
   try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
@@ -66,7 +67,7 @@ test('full profile copy is visible after experience so mobile readers reach work
     assert.equal(await page.locator('#profile p').count(), 2);
     assert.equal(await page.locator('#profile p').first().textContent(), 'I build applied AI platforms, backend engineering, developer experience tooling, and infrastructure for Fintech and Banking Companies. Currently, I lead AI and automation platform initiatives at Superbank, helping teams adopt AI safely, automate repeatable workflows, and improve operational execution.');
     assert.equal(await page.locator('#profile p').last().textContent(), 'Before Superbank, I spent four years at Xendit, growing from intern to Senior Software Engineer while building Open Banking APIs, payment infrastructure, and internal automation systems. Outside my day-to-day work, I stay active in open source through developer tooling, AI/LLM infrastructure, and productivity-focused projects. I am open to conversations around applied AI, backend engineering, developer experience, infrastructure, and engineering productivity roles.');
-    const order = await page.evaluate(() => ['experience','profile','projects'].map(id => document.getElementById(id).getBoundingClientRect().top));
+    const order = await page.evaluate(() => ['profile','experience','projects'].map(id => document.getElementById(id).getBoundingClientRect().top));
     assert.ok(order[0] < order[1] && order[1] < order[2], String(order));
     assert.equal(await page.locator('.section-navigation a[href="#profile"]').count(), 1);
   } finally { await browser.close(); }
@@ -84,6 +85,7 @@ for (const [width, height] of [[320, 700], [390, 844], [767, 900], [768, 1024], 
         viewport: innerWidth,
         width: document.documentElement.scrollWidth,
         experience: document.querySelector('#experience').getBoundingClientRect().top,
+        profile: document.querySelector('#profile').getBoundingClientRect().top,
         links: [...document.querySelectorAll('.section-navigation a')].map(a => ({
           name: a.textContent.trim(), target: !!document.querySelector(a.getAttribute('href'))
         })),
@@ -95,7 +97,7 @@ for (const [width, height] of [[320, 700], [390, 844], [767, 900], [768, 1024], 
       assert.ok(geometry.links.every(a => a.name && a.target), JSON.stringify(geometry.links));
       assert.ok(geometry.contact.length >= 3 && geometry.contact.every(Boolean));
       assert.ok(geometry.roleCount > 3 && geometry.projectCount > 3);
-      if (width === 390) assert.ok(geometry.experience < 844, `Experience starts at ${geometry.experience}px`);
+      if (width === 390) assert.ok(geometry.profile < 844, `Profile starts at ${geometry.profile}px`);
       assert.deepEqual(errors, []);
     } finally { await browser.close(); }
   });
@@ -136,12 +138,12 @@ test('printing from Dark uses a light paper surface and dark text', async () => 
       page: getComputedStyle(document.querySelector('.wrapper')).backgroundColor,
       text: getComputedStyle(document.querySelector('.page-header .header-name')).color,
       layout: getComputedStyle(document.querySelector('#main-content')).display,
-      experienceBottom: document.querySelector('#experience').getBoundingClientRect().bottom,
-      profileTop: document.querySelector('#profile').getBoundingClientRect().top,
+      profileBottom: document.querySelector('#profile').getBoundingClientRect().bottom,
+      experienceTop: document.querySelector('#experience').getBoundingClientRect().top,
     }));
     assert.equal(colors.page, 'rgb(255, 255, 255)');
     assert.equal(colors.text, 'rgb(20, 32, 20)');
     assert.equal(colors.layout, 'block');
-    assert.ok(colors.profileTop >= colors.experienceBottom);
+    assert.ok(colors.experienceTop >= colors.profileBottom);
   } finally { await browser.close(); }
 });

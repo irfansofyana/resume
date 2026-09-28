@@ -5,7 +5,7 @@
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
-    <a class="skip-link" href="#main-content">Skip to experience</a>
+    <a class="skip-link" href="#main-content">Skip to profile</a>
     <div class="wrapper terminal-window" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
       <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
@@ -32,8 +32,8 @@
       </header>
 
       <nav class="section-navigation no-print" aria-label="Résumé sections">
-        {% if site.resume_section_experience %}<a href="#experience">Experience</a>{% endif %}
         <a href="#profile">Profile</a>
+        {% if site.resume_section_experience %}<a href="#experience">Experience</a>{% endif %}
         {% if site.resume_section_projects %}<a href="#projects">Projects</a>{% endif %}
         {% if site.resume_section_skills %}<a href="#skills">Skills</a>{% endif %}
         {% if site.resume_section_education %}<a href="#education">Education</a>{% endif %}
@@ -44,6 +44,12 @@
       </nav>
 
       <main id="main-content">
+      <section class="content-section compact-section" id="profile">
+        <header class="section-header"><h2>Profile</h2></header>
+        <p class="executive-summary" itemprop="description">{{ site.resume_header_intro | escape }}</p>
+        <p class="executive-summary-detail" itemprop="description">{{ site.resume_header_detail | escape }}</p>
+      </section>
+
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
       <section class="content-section" id="experience">
@@ -71,12 +77,6 @@
       </section>
       <!-- end Experience -->
       {% endif %}
-
-      <section class="content-section compact-section" id="profile">
-        <header class="section-header"><h2>Profile</h2></header>
-        <p class="executive-summary" itemprop="description">{{ site.resume_header_intro | escape }}</p>
-        <p class="executive-summary-detail" itemprop="description">{{ site.resume_header_detail | escape }}</p>
-      </section>
 
       {% if site.resume_section_projects %}
       <!-- begin Projects -->
