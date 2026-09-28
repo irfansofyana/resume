@@ -1,0 +1,94 @@
+// Irfan Dev Design System palette adapted for a readable résumé document.
+html[data-theme="light"] {
+  --page: #ecebe4;
+  --surface: #f8f7f1;
+  --ink: #142014;
+  --muted: #46544a;
+  --subtle: #59675b;
+  --line: #cfccbf;
+  --accent: #0b7a3b;
+  --link: #0a6893;
+  --shadow: 0 15px 48px rgba(20, 32, 20, .08);
+}
+html[data-theme="dark"] {
+  --page: #0a0a0a;
+  --surface: #111613;
+  --ink: #e8ffe8;
+  --muted: #a8b8a8;
+  --subtle: #a8b8a8;
+  --line: #39453b;
+  --accent: #36ff7a;
+  --link: #6ad7ff;
+  --shadow: 0 15px 48px rgba(0, 0, 0, .28);
+}
+
+html[data-theme] {
+  background: var(--page);
+  color-scheme: light;
+}
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme] body { background: var(--page); color: var(--ink); }
+html[data-theme] .wrapper { background: var(--surface); border-color: var(--line); }
+html[data-theme] :is(h1, h2, h3, h4, h5, h6) { color: var(--ink); }
+html[data-theme] a { color: var(--link); border-bottom-color: currentColor; }
+html[data-theme] a:hover { color: var(--accent); }
+html[data-theme] :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+html[data-theme] ::selection { background: var(--accent); color: var(--page); }
+html[data-theme] .page-header { border-color: var(--accent); }
+html[data-theme] .page-header .header-name,
+html[data-theme] .page-header .header-title { color: var(--ink); }
+html[data-theme] .page-header .executive-summary,
+html[data-theme] .resume-utility { color: var(--muted); }
+html[data-theme] .resume-utility,
+html[data-theme] .section-navigation { border-color: var(--line); }
+html[data-theme] .resume-eyebrow,
+html[data-theme] .resume-contact-links a,
+html[data-theme] .section-navigation a { color: var(--accent); }
+html[data-theme] .theme-toggle { color: var(--ink); border-color: var(--line); }
+html[data-theme] .theme-toggle:hover { border-color: var(--accent); }
+html:not(.theme-ready) .theme-toggle { display: none; }
+html[data-theme] .section-header { border-color: var(--line); }
+html[data-theme] .section-header h2,
+html[data-theme] .content-section .resume-item .resume-item-title,
+html[data-theme] .project-card .resume-item-title,
+html[data-theme] .skills-list .skill-category .skill-heading { color: var(--ink); }
+html[data-theme] .section-header::after { background: var(--accent); }
+html[data-theme] .content-section:not(:last-of-type),
+html[data-theme] .content-section .resume-item .resume-position,
+html[data-theme] .skills-list .skill-category,
+html[data-theme] .project-grid,
+html[data-theme] .project-card,
+html[data-theme] .compact-section .resume-item,
+html[data-theme] .project-tags li,
+html[data-theme] .page-footer { border-color: var(--line); }
+html[data-theme] .content-section .resume-item > .resume-item-copy,
+html[data-theme] .content-section .resume-item .resume-position .resume-item-copy,
+html[data-theme] .skills-list .skill-category .skill-technologies,
+html[data-theme] .project-card .resume-item-copy,
+html[data-theme] .project-role,
+html[data-theme] .project-meta,
+html[data-theme] .project-tags li,
+html[data-theme] .resume-item-details,
+html[data-theme] .page-footer .footer-line { color: var(--muted); }
+html[data-theme] .content-section .resume-item .resume-position .resume-item-details,
+html[data-theme] .page-footer .footer-line > a { color: var(--ink); }
+html[data-theme] .project-index { color: var(--accent); }
+
+@media print {
+  html[data-theme="dark"] {
+    --page: #fff;
+    --surface: #fff;
+    --ink: #142014;
+    --muted: #46544a;
+    --subtle: #59675b;
+    --line: #cfccbf;
+    --accent: #0b7a3b;
+    --link: #0a6893;
+    --shadow: none;
+    color-scheme: light;
+  }
+  html[data-theme] body,
+  html[data-theme] .wrapper { background: #fff !important; color: #142014 !important; }
+  html[data-theme] .page-header .header-name,
+  html[data-theme] .section-header h2 { color: #142014 !important; }
+}

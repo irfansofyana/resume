@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
@@ -35,4 +35,19 @@ test('public résumé detail remains sourced from existing Jekyll data', () => {
   assert.match(source, /position\.summary/);
   assert.match(source, /site\.data\.projects/);
   assert.match(source, /project\.description/);
+});
+
+test('theme bootstraps before stylesheet and loads behavior script', () => {
+  const head = readFileSync(new URL('../_includes/head.html', import.meta.url), 'utf8');
+  assert.ok(head.indexOf('resume-theme') >= 0 && head.indexOf('resume-theme') < head.indexOf('css/main.css'));
+  assert.match(source, /assets\/js\/theme\.js/);
+  assert.match(source, /id="theme-toggle"[^>]+aria-pressed="false"/);
+});
+
+test('stylesheet defines distinct light and dark palettes', () => {
+  const path = new URL('../_sass/_theme.scss', import.meta.url);
+  assert.ok(existsSync(path), 'theme stylesheet is missing');
+  const styles = readFileSync(path, 'utf8');
+  assert.match(styles, /data-theme="light"/);
+  assert.match(styles, /data-theme="dark"/);
 });

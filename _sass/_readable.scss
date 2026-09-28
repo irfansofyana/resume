@@ -17,8 +17,8 @@ body { font-family: "Irfan JetBrains Mono", $mono-font; }
   padding: 2rem 3.25rem 4rem;
   margin: 2.25rem auto;
   border: 0;
-  background: #f8f7f1;
-  box-shadow: 0 15px 48px rgba(20, 32, 20, 0.08);
+  background: var(--surface);
+  box-shadow: 0 15px 48px var(--shadow);
 }
 
 .skip-link {
@@ -27,14 +27,14 @@ body { font-family: "Irfan JetBrains Mono", $mono-font; }
   left: 1rem;
   z-index: 100;
   padding: .65rem 1rem;
-  background: #0b7a3b;
+  background: var(--accent);
   color: #fff;
   &:focus { top: 1rem; }
 }
 
 .page-header {
   display: block;
-  border-bottom: 2px solid #0b7a3b;
+  border-bottom: 2px solid var(--accent);
   margin: 0;
   padding: 0 0 1.6rem;
 
@@ -50,14 +50,14 @@ body { font-family: "Irfan JetBrains Mono", $mono-font; }
   }
   .header-title {
     font-family: "Irfan JetBrains Mono", $mono-font;
-    color: #142014;
+    color: var(--ink);
     font-size: .92rem;
     font-style: normal;
     font-weight: 700;
     margin: 0 0 1rem;
   }
   .executive-summary {
-    color: #46544a;
+    color: var(--muted);
     font-size: .94rem;
     line-height: 1.6;
     max-width: 39rem;
@@ -72,22 +72,22 @@ body { font-family: "Irfan JetBrains Mono", $mono-font; }
   align-items: center;
   gap: 1rem;
   padding-bottom: .8rem;
-  border-bottom: 1px solid #cfccbf;
-  color: #46544a;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
   font-size: .66rem;
   letter-spacing: .045em;
 }
 .theme-toggle {
-  border: 1px solid #cfccbf;
+  border: 1px solid var(--line);
   background: transparent;
-  color: #142014;
+  color: var(--ink);
   padding: .3rem .55rem;
   font: inherit;
   cursor: pointer;
   flex: none;
 }
 .resume-eyebrow {
-  color: #0b7a3b;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: .08em;
   font-size: .7rem;
@@ -98,7 +98,7 @@ body { font-family: "Irfan JetBrains Mono", $mono-font; }
   flex-wrap: wrap;
   gap: .4rem 1.3rem;
   font-size: .78rem;
-  a { color: #0b7a3b; }
+  a { color: var(--accent); }
 }
 .section-navigation {
   display: flex;
@@ -107,9 +107,9 @@ body { font-family: "Irfan JetBrains Mono", $mono-font; }
   white-space: nowrap;
   scrollbar-width: thin;
   padding: .8rem 0;
-  border-bottom: 1px solid #cfccbf;
+  border-bottom: 1px solid var(--line);
   font-size: .72rem;
-  a { color: #0b7a3b; flex: none; }
+  a { color: var(--accent); flex: none; }
 }
 
 #main-content { min-width: 0; }

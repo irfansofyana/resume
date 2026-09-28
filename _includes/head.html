@@ -20,7 +20,8 @@
   <meta name="twitter:title" content="{{ page_title }}">
   <meta name="twitter:description" content="{{ page_description }}">
 
-  <link rel="stylesheet" href="css/main.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('resume-theme') === 'dark' ? 'dark' : 'light'; } catch (error) { document.documentElement.dataset.theme = 'light'; }</script>
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/x-icon" href="favicon.png" />
   <!-- Google tag (gtag.js) -->
