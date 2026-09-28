@@ -1,0 +1,147 @@
+// Experience-first résumé composition. Palette is defined in _theme.scss.
+@font-face {
+  font-family: "Irfan JetBrains Mono";
+  src: url("../assets/fonts/JetBrainsMono-latin.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Irfan Fira Code";
+  src: url("../assets/fonts/FiraCode-latin.woff2") format("woff2");
+  font-display: swap;
+}
+
+body { font-family: "Irfan JetBrains Mono", $mono-font; }
+
+.wrapper {
+  max-width: 900px;
+  padding: 2rem 3.25rem 4rem;
+  margin: 2.25rem auto;
+  border: 0;
+  background: #f8f7f1;
+  box-shadow: 0 15px 48px rgba(20, 32, 20, 0.08);
+}
+
+.skip-link {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  z-index: 100;
+  padding: .65rem 1rem;
+  background: #0b7a3b;
+  color: #fff;
+  &:focus { top: 1rem; }
+}
+
+.page-header {
+  display: block;
+  border-bottom: 2px solid #0b7a3b;
+  margin: 0;
+  padding: 0 0 1.6rem;
+
+  .header-name {
+    max-width: none;
+    font-family: "Irfan Fira Code", $mono-font;
+    font-size: clamp(2.05rem, 4.5vw, 3.3rem);
+    font-weight: 700;
+    letter-spacing: -.055em;
+    line-height: 1.12;
+    text-align: left;
+    margin: .75rem 0 .55rem;
+  }
+  .header-title {
+    font-family: "Irfan JetBrains Mono", $mono-font;
+    color: #142014;
+    font-size: .92rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .executive-summary {
+    color: #46544a;
+    font-size: .94rem;
+    line-height: 1.6;
+    max-width: 39rem;
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+}
+
+.resume-utility {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid #cfccbf;
+  color: #46544a;
+  font-size: .66rem;
+  letter-spacing: .045em;
+}
+.theme-toggle {
+  border: 1px solid #cfccbf;
+  background: transparent;
+  color: #142014;
+  padding: .3rem .55rem;
+  font: inherit;
+  cursor: pointer;
+  flex: none;
+}
+.resume-eyebrow {
+  color: #0b7a3b;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .7rem;
+  margin: 1.8rem 0 0;
+}
+.resume-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.3rem;
+  font-size: .78rem;
+  a { color: #0b7a3b; }
+}
+.section-navigation {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  padding: .8rem 0;
+  border-bottom: 1px solid #cfccbf;
+  font-size: .72rem;
+  a { color: #0b7a3b; flex: none; }
+}
+
+#main-content { min-width: 0; }
+#experience { padding-top: 1.7rem; }
+.content-section { scroll-margin-top: 1rem; }
+.section-header {
+  margin-bottom: 1.25rem;
+  h2 { text-transform: none; font-family: "Irfan Fira Code", $mono-font; }
+}
+.content-section .resume-item .resume-item-title,
+.project-card .resume-item-title { font-family: "Irfan Fira Code", $mono-font; }
+.content-section .resume-item .resume-position .resume-item-details,
+.skills-list .skill-category .skill-heading { font-family: "Irfan JetBrains Mono", $mono-font; }
+.content-section .resume-item .resume-position { border-left: 0; padding-left: 0; }
+.project-card { min-width: 0; }
+.project-card a, .resume-item a, .skill-technologies { overflow-wrap: anywhere; }
+
+@media (max-width: 768px) {
+  .wrapper { margin: 0; padding: 1.15rem 1.25rem 3rem; box-shadow: none; }
+  .page-header .header-name { font-size: clamp(2rem, 7vw, 2.9rem); }
+  .resume-eyebrow { margin-top: 1.45rem; }
+  .section-navigation { margin-right: -1.25rem; padding-right: 1.25rem; }
+}
+@media (max-width: 375px) {
+  .wrapper { padding-left: 1rem; padding-right: 1rem; }
+  .resume-utility { font-size: .58rem; }
+  .page-header .header-title { font-size: .82rem; }
+  .section-navigation { margin-right: -1rem; }
+  .project-card { grid-template-columns: 3rem minmax(0,1fr); gap: .65rem; }
+}
+@media print {
+  .wrapper { background: #fff; margin: 0; box-shadow: none; }
+  .page-header .header-name { font-size: 1.7rem; }
+  .resume-utility, .resume-eyebrow, .skip-link { display: none; }
+}

@@ -27,7 +27,7 @@ resume_contact_address:         "Indonesia"
 resume_header_contact_info:     "South Jakarta, Indonesia • mail@irfansp.dev • linkedin.com/in/irfansofyana"
 display_header_contact_info:    "true"
 
-resume_header_intro: "<p>I build applied AI platforms, backend engineering, developer experience tooling, and infrastructure for Fintech and Banking Companies. Currently, I lead AI and automation platform initiatives at Superbank, helping teams adopt AI safely, automate repeatable workflows, and improve operational execution.</p><p>Before Superbank, I spent four years at Xendit, growing from intern to Senior Software Engineer while building Open Banking APIs, payment infrastructure, and internal automation systems. Outside my day-to-day work, I stay active in open source through developer tooling, AI/LLM infrastructure, and productivity-focused projects. I am open to conversations around applied AI, backend engineering, developer experience, infrastructure, and engineering productivity roles.</p>"
+resume_header_intro: "I lead applied AI and automation platform work and build backend systems that teams can rely on. Previously at Xendit, I worked on open banking APIs, payments, and engineering tooling."
 
 resume_strengths:
   - Applied AI
@@ -43,9 +43,8 @@ resume_strengths:
 # to leave blank
 resume_looking_for_work:        "yes"
 
-# Last updated timestamp control
-resume_show_last_updated:        true
-resume_last_updated_date:        "June 13, 2026"
+# Only show an updated date after the résumé content has been reviewed.
+resume_show_last_updated:        false
 
 # Decide which sections to use
 # comment out to hide
