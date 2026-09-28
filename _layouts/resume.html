@@ -57,7 +57,7 @@
           {% for position in job.positions %}
           <div class="resume-position">
             <h4 class="resume-item-details" itemprop="description">{{ position.role }} &bull; {{ position.duration }}</h4>
-            <p class="resume-item-copy">{{ position.summary }}</p>
+            <div class="resume-item-copy">{{ position.summary }}</div>
           </div>
           {% endfor %}
         </div><!-- end of resume-item -->
@@ -133,16 +133,15 @@
         <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
           <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
           <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
-          <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
-          <p class="resume-item-copy" itemprop="description">
-            <ul class="resume-item-list">
-              {% for award in education.awards %}
-              <li>{{ award.award }}</li>
-              {% endfor %}
-            </ul>
-
-
-          <p class="resume-item-copy">{{ education.summary }}</p>
+          {% if education.award %}<h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>{% endif %}
+          {% if education.awards.size > 0 %}
+          <ul class="resume-item-list" itemprop="description">
+            {% for award in education.awards %}
+            <li>{{ award.award }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if education.summary %}<p class="resume-item-copy">{{ education.summary }}</p>{% endif %}
         </div>
         {% endfor %}
       </section>

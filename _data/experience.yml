@@ -49,18 +49,18 @@
         <p> Key achievements and responsibilities: </p>
         <ul>
           <li>Ensured Xendit's compliance with Bank Indonesia's SNAP API standards by architecting and developing SNAP Payment API solutions (QRIS, Virtual Account, Ewallet, Direct Debit), enabling seamless merchant integration with standardized interface. Related work: <a href="https://developers.xendit.co/api-reference/#bi-snap" target="_blank" rel="noopener noreferrer">https://developers.xendit.co/api-reference/#bi-snap</a></li>
-          <li>Successfully managed multicultural team of 7 contractors (5 Ukraine-based, 2 Indonesia-based) to deliver comprehensive internal HR department automation solutions:</li>
+          <li>Successfully managed multicultural team of 7 contractors (5 Ukraine-based, 2 Indonesia-based) to deliver comprehensive internal HR department automation solutions:
           <ul>
             <li>Engineered performance review automation system including cost calculations and automated document generation, reducing recurring HR manual workload</li>
             <li>Developed automated account provisioning/de-provisioning workflows for trial candidates (Google Workspace, Slack), streamlining Talent Acquisition operations</li>
             <li>Developed automated account provisioning system eliminating manual HR work for new joiner setup across multiple platforms (Google Workspace, Slack, Atlassian, LastPass, BambooHR), reducing manual operations while significantly improving employee onboarding experience and enabling day-one productivity</li>
-          </ul>
-          <li>Served as Acting Lead for Engineering Operations team:</li>
+          </ul></li>
+          <li>Served as Acting Lead for Engineering Operations team:
           <ul>
             <li>Developed and architected automated generation of engineering scorecard report integrating multiple data sources (postmortems, JIRA, Sentry, PagerDuty, DataDog) for comprehensive reliability and performance evaluation</li>
             <li>Built intelligent automation enabling Engineering Managers to generate customized outcomes documents for evaluating their direct reports, automatically creating personalized document based on each direct report's current level and career track, eliminating 100% of manual document preparation work</li>
             <li>Contributed to the development of a proactive merchant notification system for service health monitoring, improving incident response and minimizing financial risk exposure</li>
-          </ul>
+          </ul></li>
         </ul>
     - role: Software Engineer (Intern – Part-time)
       duration: June 2020 — June 2021

@@ -1,66 +1,40 @@
-# Resume template
+# Irfan Sofyana Putra — live résumé
 
-*A simple Jekyll + GitHub Pages powered resume template.*
+This repository builds the human-readable résumé at [resume.irfansp.dev](https://resume.irfansp.dev/) with Jekyll and GitHub Pages. Experience, projects, skills, education and other sections are sourced from `_data/`; the compact page layout is `_layouts/resume.html`. Light and Dark modes use Irfan's Dev Design System colors and persist a visitor's choice in their browser. Print always uses a light surface.
 
-![img](images/screenshot.png)
+## Local preview
 
-## Docs
+Ruby/Bundler are not required on the host if Docker is available:
 
-### Running locally
+```bash
+bash scripts/build-local.sh
+python3 -m http.server 4175 --bind 127.0.0.1 --directory "$TMPDIR/resume-jekyll/site"
+```
 
-To test locally, run the following in your terminal:
+Open <http://127.0.0.1:4175/>. `build-local.sh` builds the pinned GitHub Pages gem image once, mounts this repository read-only, and writes the generated preview to the Hermes scratch directory. After editing the site, rerun the build command and refresh the page. The tracked `_site/` and `.sass-cache/` directories are legacy build output; **do not use them as proof that a new build passed**.
 
-1. Clone repo locally
-1. `bundle install`
-2. `bundle exec jekyll serve`
-3. Open your browser to `localhost:4000`
+With a local Ruby/Bundler environment, `bundle install && bundle exec jekyll serve` remains an option.
 
-### Running locally with Docker
+## Editing the résumé
 
-To test locally with docker, run the following in your terminal after installing docker into your system:
+- `_config.yml`: name, current title, concise introduction, contact, and section visibility.
+- `_data/experience.yml`, `_data/projects.yml`, `_data/skills.yml` and the other `_data/*.yml`: substantive career details. Keep dates, metrics, and claims accurate and reviewable.
+- `_layouts/resume.html`: semantic page structure. `_sass/_readable.scss` and `_sass/_theme.scss`: layout and palettes. `assets/js/theme.js`: the optional mode switch.
+- The current theme is Light on first visit; the visible button switches to Dark and back. Navigation and content work without JavaScript.
 
-1. `docker image build -t resume-template .`
-2. `docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template`
+Run source tests with `node --test tests/resume-structure.test.mjs`. Browser tests require Playwright and Chrome; install Playwright as a development dependency in your preferred environment, or point `PLAYWRIGHT_MODULE` to an existing Playwright installation:
 
-### Customizing
+```bash
+PLAYWRIGHT_MODULE=/absolute/path/to/node_modules/playwright \
+  node --test tests/theme.browser.mjs tests/resume.browser.mjs
+```
 
-First you'll want to fork the repo to your own account. Then clone it locally and customize, or use the GitHub web editor to customize.
+The browser tests use `http://127.0.0.1:4175/` by default (`RESUME_URL` overrides it). `CHROME_PATH` overrides `/usr/bin/google-chrome`.
 
-#### Options/configuration
+## Public release boundary
 
-Most of the basic customization will take place in the `/_config.yml` file. Here is a list of customizations available via `/_config.yml`:
+Before publishing, review configuration, YAML content, generated HTML, metadata, URLs, images, font assets and screenshots. Do not add credentials, private files or paths, another person's private information, confidential company details or unapproved internal metrics. Existing public content is not automatically cleared for a new release. Obtain Irfan's approval of the actual local screenshots before pushing or deploying.
 
-[...write these out...]
+The bundled JetBrains Mono and Fira Code font subsets are licensed under the SIL Open Font License 1.1; their notices are in `assets/fonts/`.
 
-#### Editing content
-
-Most of the content configuration will take place in the `/_layouts/resume.html` file. Simply edit the markup there accordingly
-
-### Publishing to GitHub Pages for free
-
-[GitHub Pages](https://pages.github.com/) will host this for free with your GitHub account. Just make sure you're using a `gh-pages` branch, and the site will automatically be available at `yourusername.github.io/resume-template` (you can rename the repo to resume for your own use if you want it to be available at `yourusername.github.io/resume`). You can also add a CNAME if you want it to be available at a custom domain...
-
-### Configuring with your own domain name
-
-To setup your GH Pages site with a custom domain, [follow the instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) on the GitHub Help site for that topic.
-
-### Themes
-
-Right now resume-template only has one theme. More are coming :soon: though. :heart:
-
-## Roadmap
-
-A feature roadmap is [available here](https://github.com/jglovier/resume-template/projects/1). If you features suggestions, please [open a new issue](https://github.com/jglovier/resume-template/issues/new).
-
-## Contributing
-
-If you spot a bug, or want to improve the code, or even make the dummy content better, you can do the following:
-
-1. [Open an issue](https://github.com/jglovier/resume-template/issues/new) describing the bug or feature idea
-2. Fork the project, make changes, and submit a pull request
-
-## License
-
-The code and styles are licensed under the MIT license. [See project license.](LICENSE) Obviously you should not use the content of this demo repo in your own resume. :wink:
-
-Disclaimer: Use of Lisa M. Simpson image and name used under [Fair Use](https://en.wikipedia.org/wiki/Fair_use) for educational purposes. Project license does not apply to use of this material.
+The site's template originated from [jglovier/resume-template](https://github.com/jglovier/resume-template); code/styles retain the repository's [MIT license](LICENSE). The résumé content and portrait are Irfan's, not template demo material.

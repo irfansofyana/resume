@@ -44,6 +44,21 @@ test('theme bootstraps before stylesheet and loads behavior script', () => {
   assert.match(source, /id="theme-toggle"[^>]+aria-pressed="false"/);
 });
 
+test('experience and education render valid block structure instead of nesting lists inside paragraphs', () => {
+  assert.doesNotMatch(source, /<p class="resume-item-copy"[^>]*>\s*\{\{ position\.summary \}\}/);
+  assert.doesNotMatch(source, /<p class="resume-item-copy"[^>]*>\s*<ul/);
+  const built = readFileSync(`${process.env.TMPDIR}/resume-jekyll/site/index.html`, 'utf8');
+  assert.doesNotMatch(built, /<h5[^>]*>\s*<\/h5>/);
+  assert.doesNotMatch(built, /<\/li>\s*<ul>/);
+});
+
+test('public build excludes planning files, tests, and development scripts', () => {
+  const site = `${process.env.TMPDIR}/resume-jekyll/site`;
+  for (const privateSource of ['docs/superpowers/plans', 'docs/superpowers/specs', 'tests', 'scripts', 'Gemfile', 'Gemfile.lock']) {
+    assert.equal(existsSync(`${site}/${privateSource}`), false, `${privateSource} leaked into public build`);
+  }
+});
+
 test('stylesheet defines distinct light and dark palettes', () => {
   const path = new URL('../_sass/_theme.scss', import.meta.url);
   assert.ok(existsSync(path), 'theme stylesheet is missing');

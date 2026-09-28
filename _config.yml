@@ -11,6 +11,17 @@ sass:
   style: compressed
 exclude:
   - AGENTS.md
+  - CLAUDE.md
+  - WARP.md
+  - README.md
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - docs
+  - scripts
+  - tests
+  - run-docker.sh
+  - .sass-cache
 
 # Resume settings
 resume_avatar:                  "true"

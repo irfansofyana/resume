@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 const require = createRequire(import.meta.url);
-const { chromium } = require(process.env.PLAYWRIGHT_MODULE || '/home/irfansofyana/repos/agent-artifacts/node_modules/playwright');
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const site = process.env.RESUME_URL || 'http://127.0.0.1:4175/';
 const launch = () => chromium.launch({ headless: true, executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome' });
 
@@ -30,8 +30,10 @@ test('blocked storage falls back to Light but permits an in-memory toggle', asyn
   try {
     const context = await browser.newContext();
     await context.addInitScript(() => {
-      Storage.prototype.getItem = () => { throw new Error('storage blocked'); };
-      Storage.prototype.setItem = () => { throw new Error('storage blocked'); };
+      Object.defineProperty(window, 'localStorage', {
+        configurable: true,
+        get() { throw new Error('storage blocked'); }
+      });
     });
     const page = await context.newPage();
     await page.goto(site);

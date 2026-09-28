@@ -4,6 +4,11 @@ set -euo pipefail
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 out="${TMPDIR:?TMPDIR must point to a scratch directory}/resume-jekyll"
 mkdir -p "$out/sass-cache"
+# Jekyll 3 does not remove excluded files from an existing destination.
+# Clear only this generated scratch site before rebuilding.
+if [[ -e "$out/site" || -L "$out/site" ]]; then
+  rm -rf -- "$out/site"
+fi
 
 if ! docker image inspect resume-local >/dev/null 2>&1; then
   docker build -t resume-local "$root"
