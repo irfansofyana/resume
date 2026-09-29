@@ -301,13 +301,13 @@
   .resume-item-copy,
   .resume-item-list {
     a {
-      color: #333;
+      color: var(--link, #333);
       text-decoration: none;
       border-bottom: 1px solid;
 
       &:hover {
         border-bottom: none;
-        color: #9c9c9c;
+        color: var(--accent, #9c9c9c);
       }
     }
   }

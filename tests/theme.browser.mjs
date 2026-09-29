@@ -52,6 +52,41 @@ test('Dark uses design-system semantic colors and readable type roles', async ()
   } finally { await browser.close(); }
 });
 
+test('project and certification title links meet text contrast in both themes', async () => {
+  const browser = await launch();
+  try {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    await page.goto(site);
+    for (const theme of ['light', 'dark']) {
+      if (theme === 'dark') {
+        await page.locator('#theme-toggle').click();
+        await page.waitForTimeout(350); // Let existing link transitions settle.
+      }
+      const samples = await page.evaluate(() => {
+        const rgb = value => (value.match(/[\d.]+/g) || []).slice(0, 3).map(Number);
+        const luminance = value => {
+          const channels = rgb(value).map(channel => {
+            const c = channel / 255;
+            return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+          });
+          return channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722;
+        };
+        const surface = getComputedStyle(document.querySelector('.wrapper')).backgroundColor;
+        return ['#projects .resume-item-title a', '#certifications .resume-item-title a'].map(selector => {
+          const element = document.querySelector(selector);
+          if (!element) throw new Error(`Missing title link: ${selector}`);
+          const foreground = getComputedStyle(element).color;
+          const a = luminance(foreground), b = luminance(surface);
+          return { selector, foreground, surface, contrast: (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05) };
+        });
+      });
+      for (const sample of samples) {
+        assert.ok(sample.contrast >= 4.5, `${theme}: ${JSON.stringify(sample)}`);
+      }
+    }
+  } finally { await browser.close(); }
+});
+
 test('blocked storage falls back to Light but permits an in-memory toggle', async () => {
   const browser = await launch();
   try {
